@@ -177,7 +177,7 @@ nav .container-fluid {
 }
 
 .nav-link {
-    color: #bd1714 !important;
+    color: white !important;
     font-weight: 500;
     text-transform: uppercase;
     transition: color 0.25s ease-in-out;
@@ -185,7 +185,7 @@ nav .container-fluid {
 
 .nav-link:hover,
 .nav-link:focus {
-    color: #e7201d !important;
+    color: #bd1714 !important;
     transition: color 0.25s ease-in-out;
 }
 
@@ -200,6 +200,13 @@ header.scroll-top nav {
 
 header.scroll-top .nav-link {
     color: white !important;
+    transition: color 0.25s ease-in-out;
+}
+
+header.scroll-top .nav-link:hover,
+header.scroll-top .nav-link:focus {
+    color: #c0c0c0 !important;
+    transition: color 0.25s ease-in-out;
 }
 
 #header-clear {
