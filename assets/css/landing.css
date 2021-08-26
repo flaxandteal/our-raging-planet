@@ -1,0 +1,36 @@
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+}
+
+
+/* General elements */
+
+html {
+    font-size: 16px !important;
+}
+
+body {
+    background: #111739 url('/assets/img/backgrounds/landing.jpg') no-repeat fixed center !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover !important;
+    max-width: 100%;
+    font-family: "Open Sans", sans-serif !important;
+    color: white !important;
+    line-height: 1.2;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.25)
+}
