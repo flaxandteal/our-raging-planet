@@ -13,15 +13,49 @@
     <!-- STYLESHEETS / Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap">
 
     <!-- STYLESHEETS / Local -->
-    <link rel="stylesheet" type="text/css" href="/assets/css/reset.css" />{% if page.name == "index.html" %}
-    <link rel="stylesheet" type="text/css" href="/assets/css/landing.css" />{% else %}
-    <link rel="stylesheet" type="text/css" href="/assets/css/main.css" />{% endif %}
+    <link rel="stylesheet" type="text/css" href="/assets/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/main.css" />
 
     <!-- STYLESHEETS / Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 </head>
 
 <body>
+    <div id="top"></div>
+    <header class="scroll-top">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/"><img class="navbar-logo" src="/assets/img/logos/logo-text-light.svg" alt="Our Raging Planet logo" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#top-menu" aria-controls="topmenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"><img src="/assets/img/icons/menu.svg" alt="" /></span>
+                </button>
+                <div class="collapse navbar-collapse" id="top-menu">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link top" aria-current="page" href="{% if page.name != "index.html"%}index.html{% endif %}#top">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% if page.name != "index.html"%}index.html{% endif %}#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% if page.name != "index.html"%}index.html{% endif %}#features">Features and Benefits</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% if page.name != "index.html"%}index.html{% endif %}#resources">Resources</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link{% if page.name == "news.html"%} active{% endif %}" href="/news.html">News</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link{% if page.name == "contact.html"%} active{% endif %}" href="/contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>{% if page.name == "index.html" %}
+        <div id="header-clear"></div>{% endif %}
