@@ -13,15 +13,11 @@ html {
 }
 
 body {
-    background-image: url('/assets/img/backgrounds/landing.jpg');
-    background-color: rgb(17, 17, 17);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background: white no-repeat fixed center !important;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
+    background-size: cover !important;
     max-width: 100%;
     font-family: "Open Sans", sans-serif !important;
     line-height: 1.2;
@@ -29,4 +25,8 @@ body {
     padding: 0;
     overflow-x: hidden;
     overflow-y: scroll;
+}
+
+.site-red {
+    color: #bd1714;
 }
