@@ -4,6 +4,21 @@ description         : Our Raging Planet
 url                 : https://ourragingplanet.co.uke
 email               : info@ourragingplanet.com
 
+# Where things are
+collections:
+  posts:
+    title           : Posts
+    output          : true
+    permalink       : /news/:title
+    
+category_path       : news/categories
+category_layout     : category.html
+
+
+tag_feed_dir        : news/tags
+tag_page_dir        : news/tags
+tag_page_layout     : tag
+
 # Handling Reading
 safe                : false
 include             : [".htaccess"]
@@ -22,6 +37,9 @@ unpublished         : false
 # Plugins
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-category-pages
+  - jekyll-paginate
 
 # Conversion
 markdown            : kramdown
