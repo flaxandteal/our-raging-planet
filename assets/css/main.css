@@ -399,7 +399,7 @@ a:focus {
     }
 }
 
-.content.features {
+#features-list .content {
     display: flex;
     flex-wrap: wrap;
 }
