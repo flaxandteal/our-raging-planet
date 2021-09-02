@@ -13,7 +13,12 @@ html {
 }
 
 body {
-    background-color: #fff;
+    position: relative;
+    background: #111739 url('/assets/img/backgrounds/landing.jpg') no-repeat fixed center !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover !important;
     max-width: 100%;
     font-family: "Open Sans", sans-serif !important;
     line-height: 1.2;
@@ -21,15 +26,6 @@ body {
     padding: 0;
     overflow-x: hidden;
     overflow-y: scroll;
-}
-
-body.home {
-    position: relative;
-    background: #111739 url('/assets/img/backgrounds/landing.jpg') no-repeat fixed center !important;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover !important;
 }
 
 .lowercase {
@@ -221,7 +217,7 @@ nav .container-fluid {
 
 header.scroll-top {
     position: static;
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 header.scroll-top nav {
@@ -302,7 +298,11 @@ a:focus {
     transition: color 0.15s ease-in-out;
 }
 
-.content {
+#home .content,
+#about .content,
+#features .content,
+#features-list .content,
+#resources .content {
     opacity: 0;
     transform: scale(0.8);
     transition: transform 1s;
@@ -318,12 +318,10 @@ a:focus {
 }
 
 .landing #content-bg {
-    background-color: rgba(0, 0, 0, 0.25);
-    display: flex;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: auto;
+    min-height: 400px;
     padding: 2.5rem;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .landing .logo {
@@ -346,7 +344,12 @@ a:focus {
 }
 
 .landing .content {
+    display: flex;
+    min-height: inherit;
     text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .landing video {
@@ -356,6 +359,9 @@ a:focus {
 }
 
 @media only screen and (max-width: 991px) {
+    .landing #content-bg {
+        min-height: unset;
+    }
     .landing .content {
         margin: 3rem 0;
     }
@@ -431,4 +437,15 @@ a:focus {
         height: auto;
         margin: 1rem 0;
     }
+}
+
+
+/* Contact section */
+
+#contact .content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
 }
