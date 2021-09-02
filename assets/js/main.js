@@ -7,7 +7,7 @@ $("#current-year").html(year);
 
 const fadeZoom = () => {
     setTimeout(() => {
-        $(".content")
+        $("#home .content")
             .css("opacity", "1")
             .css("transform", "scale(1)");
     }, 250);
@@ -21,7 +21,7 @@ const menuScrollHandler = () => {
     const scroll = $(window).scrollTop();
     const topHeight = parseInt($(".landing #content-bg").css("height"));
 
-    if (scroll >= (topHeight)) {
+    if (scroll >= topHeight) {
         $("header").removeClass("scroll-top", 250, "easeInBack");
         $("#header-clear").show();
     } else {
@@ -32,10 +32,39 @@ const menuScrollHandler = () => {
 
 // SECTION SCROLL BEHAVIOUR
 
+const sectionScrollHandler = () => {
+    const about = $("#about").visible();
+    const features = $("#features").visible();
+    const featuresList = $("#features-list").visible();
+    const resources = $("#resources").visible();
+
+    if (about) {
+        $("#about .content")
+            .css("opacity", "1")
+            .css("transform", "scale(1)");
+    }
+    if (features) {
+        $("#features .content")
+            .css("opacity", "1")
+            .css("transform", "scale(1)");
+    }
+    if (featuresList) {
+        $("#features-list .content")
+            .css("opacity", "1")
+            .css("transform", "scale(1)");
+    }
+    if (resources) {
+        $("#resources .content")
+            .css("opacity", "1")
+            .css("transform", "scale(1)");
+    }
+}
+
 // CALLING SCROLL HANDLERS
 
 const scrollHandlers = () => {
     menuScrollHandler();
+    sectionScrollHandler();
 }
 
 $(window).on("scroll", scrollHandlers);
