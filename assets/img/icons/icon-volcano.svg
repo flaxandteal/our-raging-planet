@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -15,8 +13,11 @@
    viewBox="0 0 86.860346 147.1283"
    id="svg55409"
    version="1.1"
-   inkscape:version="0.91 r13725"
-   sodipodi:docname="icon-volcano.svg">
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15)"
+   sodipodi:docname="icon-volcano.svg"
+   inkscape:export-filename="./icon-volcano.png"
+   inkscape:export-xdpi="50.160301"
+   inkscape:export-ydpi="50.160301">
   <defs
      id="defs55411">
     <clipPath
@@ -1664,8 +1665,9 @@
      inkscape:window-width="1920"
      inkscape:window-height="1016"
      inkscape:window-x="0"
-     inkscape:window-y="27"
-     inkscape:window-maximized="1" />
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:document-rotation="0" />
   <metadata
      id="metadata55414">
     <rdf:RDF>
@@ -1674,7 +1676,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
