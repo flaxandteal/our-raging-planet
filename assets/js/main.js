@@ -33,27 +33,49 @@ const menuScrollHandler = () => {
 // SECTION SCROLL BEHAVIOUR
 
 const sectionScrollHandler = () => {
-    const about = $("#about").visible();
-    const features = $("#features").visible();
-    const featuresList = $("#features-list").visible();
-    const resources = $("#resources").visible();
+    const scroll = $(window).scrollTop();
+    const menuHeight = parseInt($("nav").css("height"));
 
-    if (about) {
+    const about = $("#about");
+    const features = $("#features");
+    const featuresList = $("#features-list");
+    const resources = $("#resources");
+
+    if (about.visible()) {
+        $("#about .content")
+            .css("opacity", "1")
+            .css("transform", "scale(1)");
+    } else if (scroll >= about.offset().top - menuHeight) {
         $("#about .content")
             .css("opacity", "1")
             .css("transform", "scale(1)");
     }
-    if (features) {
+
+    if (features.visible()) {
+        $("#features .content")
+            .css("opacity", "1")
+            .css("transform", "scale(1)");
+    } else if (scroll >= features.offset().top - menuHeight) {
         $("#features .content")
             .css("opacity", "1")
             .css("transform", "scale(1)");
     }
-    if (featuresList) {
+
+    if (featuresList.visible()) {
+        $("#features-list .content")
+            .css("opacity", "1")
+            .css("transform", "scale(1)");
+    } else if (scroll >= featuresList.offset().top - menuHeight) {
         $("#features-list .content")
             .css("opacity", "1")
             .css("transform", "scale(1)");
     }
-    if (resources) {
+
+    if (resources.visible()) {
+        $("#resources .content")
+            .css("opacity", "1")
+            .css("transform", "scale(1)");
+    } else if (scroll >= resources.offset().top - menuHeight) {
         $("#resources .content")
             .css("opacity", "1")
             .css("transform", "scale(1)");
