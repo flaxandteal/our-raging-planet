@@ -1,0 +1,21 @@
+---
+layout: default
+---
+        <section class="landing">
+            <div id="content-bg">
+                <div class="content">
+                    <h1>News</h1>
+                    <p class="caption">Keep up to date with our latest news.</p>
+                </div>
+            </div>
+        </section>
+        <section class="news-posts">
+            <div class="content">
+                <h2>All posts in "<span class="capitalize">{{ page.title }}</span>"</h2>
+                {% assign paginator = page.paginator %}
+                {% for post in paginator.posts %}
+                    {% include list-story.html %}
+                {% endfor %}
+                {% include news-paginator.html type="category" %}
+            </div>
+        </section>
