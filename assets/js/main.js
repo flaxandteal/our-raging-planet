@@ -93,6 +93,12 @@ const scrollHandlers = () => {
 
 $(window).on("scroll", scrollHandlers);
 
+/* INITIALISING TOOLTIPS */
+
+const tooltipInit = () => {
+    $('[data-bs-toggle="tooltip"]').tooltip();
+}
+
 // TRIMMING WHITESPACE IN AUTHOR BOX FOR BLOG POSTS
 
 const trimAuthorSpace = () => {
@@ -102,4 +108,9 @@ const trimAuthorSpace = () => {
     }
 }
 
-$(document).ready(trimAuthorSpace);
+// READY DOCUMENT FUNCTION CALLS 
+
+$(document).ready(() => {
+    tooltipInit();
+    trimAuthorSpace();
+});
