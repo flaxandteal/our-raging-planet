@@ -104,7 +104,7 @@
 
 .news-card-cat-date>li:not(:last-child)::after {
     content: " \00B7";
-    color: #111739 !important;
+    color: #6c757d !important;
 }
 
 .news-card-cat-date .date,
