@@ -94,12 +94,12 @@ section:not(.landing) {
     text-align: center;
 }
 
-section:not(.landing):nth-child(odd) {
+section:not(.landing):nth-child(even) {
     background-color: white;
     color: black;
 }
 
-section:not(.landing):nth-child(even) {
+section:not(.landing):nth-child(odd) {
     background-color: #111739;
     color: white;
 }
@@ -120,11 +120,11 @@ section:not(.landing) .content {
     margin: 1rem 0;
 }
 
-section:not(.landing):nth-child(odd) .section-title {
+section:not(.landing):nth-child(even) .section-title {
     color: #111739;
 }
 
-section:not(.landing):nth-child(even) .section-title {
+section:not(.landing):nth-child(odd) .section-title {
     color: #c0c0c0;
 }
 
