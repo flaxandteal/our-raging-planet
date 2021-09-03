@@ -12,7 +12,40 @@
     <script type="text/javascript" src="/assets/js/jquery-visible/jquery.visible.min.js"></script>
 
     <!-- JAVASCRIPT / Local -->
-    <script type="text/javascript" src="/assets/js/main.js" async></script>
+    <script type="text/javascript" src="/assets/js/main.js" async></script>{% if page.name == "contact.html" %}
+
+    <!-- JAVASCRIPT / Contact Form -->
+    <script>
+        const form = document.getElementById("contact-form");
+
+        const handleSubmit = async(event) => {
+            event.preventDefault();
+            const formSuccess = document.getElementById("contact-form-success");
+            const formError = document.getElementById("contact-form-error");
+            const data = new FormData(event.target);
+
+            try {
+                const response = await fetch(event.target.action, {
+                    method: form.method,
+                    body: data,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                if (response) {
+                    form.style.display = "none";
+                    formSuccess.style.display = "block";
+                    formSuccess.innerHTML = "Thanks for your submission! We will get back to you soon.";
+                    form.reset();
+                }
+            } catch (error) {
+                formError.style.display = "block";
+                formError.innerHTML = "There was a problem submitting your form. Kindly try again.";
+            }
+        }
+
+        form.addEventListener("submit", handleSubmit);
+    </script>{% endif %}
 </body>
 
 </html>
