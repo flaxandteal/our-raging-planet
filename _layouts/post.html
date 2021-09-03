@@ -3,7 +3,7 @@ layout: default
 ---
         <section class="landing">
             <div id="content-bg">
-                <div class="content flex-row justify-content-between">
+                <div class="content post-landing">
                     <div class="post-top">
                         <div class="post-header">
                             <h1>{{ page.title }}</h1>
@@ -11,7 +11,7 @@ layout: default
                         </div>
                         <ul class="post-info">
                             <li>{{ page.date | date_to_long_string }}</li>
-                            <li><a href="/news/categories/{{ page.categories | first | downcase }}">{{ page.categories | first }}</a></li>
+                            <li id="category"><a href="/news/categories/{{ page.categories | first | downcase }}">{{ page.categories | first }}</a></li>
                             {% assign total_count = content | strip_html | number_of_words %}
                             {% assign approx_read_time = total_count | divided_by: 250 %}
                             {% if approx_read_time < 1 %}
@@ -26,9 +26,9 @@ layout: default
         </section>
         <section>
             <div class="post-content-top">    
-                <p class="section-subtitle m-0">by {% include post-author.html %}</p>
+                <p class="section-subtitle">by {% include post-author.html %}</p>
                 <!-- AddToAny BEGIN -->
-                <div class="a2a_kit a2a_kit_size_32 a2a_default_style m-0">
+                <div class="post-share a2a_kit a2a_kit_size_32 a2a_default_style">
                     <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
                     <a class="a2a_button_facebook"></a>
                     <a class="a2a_button_twitter"></a>
