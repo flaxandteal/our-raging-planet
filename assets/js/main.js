@@ -41,6 +41,8 @@ const sectionScrollHandler = () => {
     const featuresList = $("#features-list");
     const resources = $("#resources");
 
+    if (about.length === 0 && features.length === 0 && featuresList.length === 0 && resources.length === 0) return;
+
     if (about.visible()) {
         $("#about .content")
             .css("opacity", "1")
