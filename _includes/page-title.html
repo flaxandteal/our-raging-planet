@@ -1,1 +1,1 @@
-Our Raging Planet{% if page.title %} | {{ page.title }}{% endif %}
+Our Raging Planet{% if page.title %} | {% if page.url contains "news/" and page.title != "News" %}News - {% endif %}{{ page.title }}{% endif %}
