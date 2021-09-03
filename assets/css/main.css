@@ -455,6 +455,17 @@ a:focus {
     width: 50%;
 }
 
+@media only screen and (max-width: 991px) {
+    #contact .content {
+        flex-direction: column;
+    }
+    #contact .contact-details,
+    #contact .contact-form {
+        width: 100%;
+        margin: 1rem 0;
+    }
+}
+
 #contact .contact-form {
     display: flex;
     flex-direction: column;
@@ -477,14 +488,22 @@ a:focus {
     display: flex;
     width: 100%;
     justify-content: space-between;
+    margin-bottom: 1rem;
 }
 
 #contact .form-row label {
     width: 48%;
 }
 
-#contact .form-row {
-    margin-bottom: 1rem;
+@media only screen and (max-width: 991px) {
+    #contact .form-row {
+        flex-direction: column;
+        margin-bottom: unset;
+    }
+    #contact .form-row label {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
 }
 
 #contact .contact-form button[type=submit] {
