@@ -92,3 +92,14 @@ const scrollHandlers = () => {
 }
 
 $(window).on("scroll", scrollHandlers);
+
+// TRIMMING WHITESPACE IN AUTHOR BOX FOR BLOG POSTS
+
+const trimAuthorSpace = () => {
+    const authorSpace = document.getElementsByClassName("author-whitespace");
+    for (const space of authorSpace) {
+        space.innerHTML = null;
+    }
+}
+
+$(document).ready(trimAuthorSpace);
