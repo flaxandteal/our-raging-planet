@@ -1,0 +1,139 @@
+.news-posts {
+    text-align: left !important;
+}
+
+
+/* Story cards */
+
+.news-card {
+    margin: 2rem auto;
+}
+
+.news-card a {
+    display: flex;
+}
+
+.news-card .card-img-container {
+    min-height: 200px;
+    height: auto;
+    overflow: hidden;
+}
+
+.news-card-img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 100%;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    transition: all 0.5s;
+}
+
+
+/* @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .news-card a,
+    .news-card .card-img-container {
+        height: 350px;
+    }
+} */
+
+@media only screen and (max-width: 991px) {
+    .news-card a {
+        flex-direction: column;
+    }
+    .news-card .card-img-container {
+        width: 100%;
+        min-height: 175px;
+        height: auto;
+    }
+    .news-card-img {
+        width: inherit;
+        min-height: inherit;
+        height: inherit;
+    }
+}
+
+.news-card .card-body {
+    padding: 1rem;
+}
+
+.news-card .card-body {
+    display: flex;
+    height: inherit;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.news-card .card-body .news-card-title {
+    color: #bd1714;
+    font-size: 1.5rem;
+    transition: color 0.2s linear;
+}
+
+.news-card a:hover .card-body .news-card-title,
+.news-card a:focus .card-body .news-card-title {
+    color: #e7201d;
+    transition: color 0.2s linear;
+}
+
+.news-card a:hover .news-card-cat-date .date,
+.news-card a:hover .news-card-cat-date .category,
+.news-card a:focus .news-card-cat-date .date,
+.news-card a:focus .news-card-cat-date .category {
+    color: #1d2862 !important;
+    transition: color 0.2s linear;
+}
+
+.news-card a:hover .news-card-img,
+.news-card a:focus .news-card-img {
+    transform: scale(1.025);
+}
+
+.news-card-cat-date {
+    padding: 0;
+    text-align: left;
+    list-style-type: none;
+}
+
+.news-card-cat-date>li {
+    display: inline-block;
+}
+
+.news-card-cat-date>li:not(:last-child)::after {
+    content: " \00B7";
+    color: #111739 !important;
+}
+
+.news-card-cat-date .date,
+.news-card-cat-date .category {
+    transition: color 0.2s linear;
+}
+
+
+/* Paginator */
+
+.pagination li a {
+    background-color: rgb(33, 29, 25) !important;
+    color: white !important;
+    transition: color 0.2s ease-in-out;
+}
+
+.pagination li a:hover,
+.pagination li a:focus {
+    color: #c0c0c0 !important;
+    transition: color 0.2s ease-in-out;
+}
+
+.pagination li.active a {
+    background-color: #bd1714 !important;
+    border-color: #bd1714 !important;
+    color: white !important;
+}
+
+.pagination li.disabled a {
+    color: #707070 !important;
+}
+
+.pagination .page-link {
+    border: 1px solid rgb(33, 29, 25) !important;
+}
