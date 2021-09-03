@@ -1,0 +1,51 @@
+---
+layout: default
+---
+        <section class="landing">
+            <div id="content-bg">
+                <div class="content flex-row justify-content-between">
+                    <div class="post-top">
+                        <div class="post-header">
+                            <h1>{{ page.title }}</h1>
+                            <p class="caption">{{ page.description }}</p>
+                        </div>
+                        <ul class="post-info">
+                            <li>{{ page.date | date_to_long_string }}</li>
+                            <li><a href="/news/categories/{{ page.categories | first | downcase }}">{{ page.categories | first }}</a></li>
+                            {% assign total_count = content | strip_html | number_of_words %}
+                            {% assign approx_read_time = total_count | divided_by: 250 %}
+                            {% if approx_read_time < 1 %}
+                                {% assign approx_read_time = 1 %}
+                            {% endif %}
+                            <li><span data-bs-toggle="tooltip" data-bs-placement="right" data-bs-html="true" title="This is an approximate figure calculated using the <code>strip_html</code> and <code>number_of_words</code> Liquid filters, and an average adult reading time of 250 words per minute.">{{ approx_read_time }} minute read</span></li>
+                        </ul>
+                    </div>
+                    <div class="post-img" style="background-image: url('/{% if page.metaImage %}{{ page.metaImage }}{% else %}assets/img/news/{{ page.date | date: "%Y-%m-%d" }}-{{ page.slug }}/meta.{% if page.metaImageExt %}{{ page.metaImageExt }}{% else %}jpg{% endif %}');{% if page.metaImagePosition %} background-position: {{ page.metaImagePosition }};{% else %} background-position: center;{% endif %}{% endif %}"></div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="post-content-top">    
+                <p class="section-subtitle m-0">by {% include post-author.html %}</p>
+                <!-- AddToAny BEGIN -->
+                <div class="a2a_kit a2a_kit_size_32 a2a_default_style m-0">
+                    <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+                    <a class="a2a_button_facebook"></a>
+                    <a class="a2a_button_twitter"></a>
+                    <a class="a2a_button_whatsapp"></a>
+                    <a class="a2a_button_telegram"></a>
+                    <a class="a2a_button_email"></a>
+                </div>
+                <script>
+                    var a2a_config = a2a_config || {};
+                    a2a_config.onclick = 1;
+                    a2a_config.num_services = 4;
+                </script>
+                <script src="https://static.addtoany.com/menu/page.js" async></script>
+                <!-- AddToAny END -->
+            </div>
+            <div class="text-start">
+                {{ content }}
+            </div>
+            {% include related-posts.html %}
+        </section>
