@@ -9,7 +9,7 @@ collections:
   posts:
     title           : Posts
     output          : true
-    permalink       : /news/:title
+    permalink       : /news/:year/:month/:day/:title
     
 category_path       : news/categories
 category_layout     : category.html
