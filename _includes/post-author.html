@@ -1,0 +1,30 @@
+{% assign i = 0 %}
+{% assign j = 1 %}
+{% assign this_authors = page.author %}
+{% assign author_count = this_authors | size %}
+{% if j == author_count %}
+    {% for author in this_authors %}
+        {{ author }}
+    {% endfor %}
+{% else %}
+    {% for author in this_authors %}
+        {% assign penultimate = author_count | minus: 1 %}
+        {% if j == 1 %}
+            {% if j == penultimate %}
+                {{ author }}
+            {% else %}
+                {{ author }}<span class="author-whitespace">
+            {% endif %}
+        {% elsif j == author_count %}
+            and {{ author }}
+        {% else %}
+            {% if j == penultimate %}
+                </span>, {{ author }}
+            {% else %}
+                </span>, {{ author }}<span class="author-whitespace">
+            {% endif %}
+        {% endif %}
+        {% assign i = i | plus: 1 %}
+        {% assign j = j | plus: 1 %}
+    {% endfor %}
+{% endif %}
