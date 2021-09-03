@@ -82,6 +82,11 @@ em {
     color: #111739;
 }
 
+[data-bs-toggle="tooltip"] {
+    border-bottom: 1px dotted white;
+    cursor: pointer;
+}
+
 
 /* Section styles */
 
