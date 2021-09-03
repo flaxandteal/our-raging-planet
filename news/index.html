@@ -1,0 +1,23 @@
+---
+layout: default
+
+title: News
+description: Keep up to date with our latest news.
+---
+        <section class="landing">
+            <div id="content-bg">
+                <div class="content">
+                    <h1>News</h1>
+                    <p class="caption">Keep up to date with our latest news.</p>
+                </div>
+            </div>
+        </section>
+        <section class="news-posts">
+            <div class="content">
+                <h2>Latest Posts</h2>
+                {% for post in paginator.posts %}
+                    {% include list-story.html %}
+                {% endfor %}
+                {% include news-paginator.html %}
+            </div>
+        </section>
