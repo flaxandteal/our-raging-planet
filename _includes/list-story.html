@@ -9,8 +9,8 @@
                 <p>{{ post.description }}</p>
             </div>
             <ul class="news-card-cat-date card-text">
-                <li class="date">{{ post.date | date_to_long_string }}</li>
-                <li class="category capitalize">{{ post.categories | first }}</li>
+                <li class="text-muted date">{{ post.date | date_to_long_string }}</li>
+                <li class="text-muted category capitalize">{{ post.categories | first }}</li>
             </ul>
         </div>
     </a>
