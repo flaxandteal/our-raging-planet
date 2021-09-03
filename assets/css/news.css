@@ -20,6 +20,9 @@
 }
 
 .news-card-img {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
     width: 300px;
@@ -136,4 +139,121 @@
 
 .pagination .page-link {
     border: 1px solid rgb(33, 29, 25) !important;
+}
+
+
+/* Post elements */
+
+.post-landing {
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    margin: unset !important;
+    margin-bottom: 3rem !important;
+}
+
+@media only screen and (max-width: 991px) {
+    .post-landing {
+        flex-direction: column-reverse !important;
+    }
+}
+
+.post-top {
+    display: flex;
+    width: 50%;
+    min-height: inherit;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 991px) {
+    .post-top {
+        width: 100%;
+    }
+}
+
+.post-header,
+.post-info {
+    text-align: left !important;
+}
+
+.post-info {
+    margin: unset;
+    padding: unset;
+    text-transform: uppercase;
+}
+
+@media only screen and (max-width: 767px) {
+    .post-info {
+        list-style-type: none;
+    }
+    .post-info li {
+        margin: 0.5rem 0;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .post-info li {
+        display: inline-block;
+    }
+    .post-top li:not(:first-child):before {
+        content: " \00A0";
+    }
+    .post-top li:not(:last-child):after {
+        content: " \00A0 \00B7";
+    }
+}
+
+.post-top #category a {
+    color: #808080 !important;
+    text-decoration: none !important;
+    transition: color 0.15s ease-in-out;
+}
+
+.post-top #category a:hover,
+.post-top #category a:focus {
+    color: white !important;
+    transition: color 0.15s ease-in-out;
+}
+
+.post-img {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 40%;
+    min-height: inherit;
+}
+
+@media only screen and (max-width: 991px) {
+    .post-img {
+        width: 100%;
+        height: 200px;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.post-content-top {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-content: center;
+    margin-bottom: 1rem;
+}
+
+.post-content-top .section-subtitle,
+.post-content-top .post-share {
+    margin: unset;
+}
+
+@media only screen and (max-width: 767px) {
+    .post-content-top {
+        flex-direction: column;
+    }
+    .post-content-top .section-subtitle {
+        margin-bottom: 1rem;
+    }
+    .post-content-top .post-share {
+        display: flex;
+        justify-content: center;
+    }
 }
