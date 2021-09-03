@@ -22,7 +22,28 @@ description: Reach out to us today by filling out our contact form.
                         <p>Telephone: +44 (0)77169 32871</p>
                         <p>Email: <a href="mailto:info@ourragingplanet.com">info@ourragingplanet.com</a></p>
                     </div>
-                    <form class="contact-form" id="contact-form" method="POST">
+                    <form class="contact-form" id="contact-form" action="https://formspree.io/f/xzbyygeo" method="POST">
+                        <p id="contact-form-error"></p>
+                        <div class="form-row">    
+                            <label>
+                                <input type="text" name="name" placeholder="Name*" required>
+                            </label>
+                            <label>
+                                <input type="email" name="_replyto" placeholder="Email*" required>
+                            </label>
+                        </div>
+                        <div class="form-row">    
+                            <label class="w-100">
+                                <input type="text" name="subject" placeholder="Subject">
+                            </label>
+                        </div>
+                        <div class="form-row">
+                            <label class="w-100">
+                                <textarea name="message" placeholder="Message*" required></textarea>
+                            </label>
+                        </div>
+                        <button type="submit">Submit</button>
                     </form>
+                    <p id="contact-form-success"></p>
             </div>
         </section>
