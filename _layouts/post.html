@@ -44,8 +44,15 @@ layout: default
                 <script src="https://static.addtoany.com/menu/page.js" async></script>
                 <!-- AddToAny END -->
             </div>
-            <div class="text-start">
+            <article class="text-start">
                 {{ content }}
+            </article>  
+            <ul class="post-info post-tags">
+                <p>Tags:</p>
+                {% for tag in page.tags %}
+                <li><a href="/{{ site.tag_page_dir }}/{{ tag | slugify: 'pretty' }}.html">{{ tag }}</a></li>
+                {% endfor %}
+            </ul>
             </div>
             {% include related-posts.html %}
         </section>
