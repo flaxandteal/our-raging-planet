@@ -11,7 +11,7 @@ layout: default
         </section>
         <section class="news-posts">
             <div class="content">
-                <h2>All posts tagged "{{ page.tag }}"</h2>
+                <h2>All posts tagged "<span class="capitalize">{{ page.tag }}</span>"</h2>
                 {% for post in page.posts %}
                     {% include list-story.html %}
                 {% endfor %}
