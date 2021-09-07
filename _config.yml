@@ -39,6 +39,7 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-category-pages
+  - jekyll/tagging
   - jekyll-paginate
 
 # Conversion
