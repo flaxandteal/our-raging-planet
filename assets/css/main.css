@@ -464,6 +464,55 @@ a.blank-link:focus {
 }
 
 
+/* Project Sandstorms section */
+
+#sandstorms .content {
+    display: flex;
+    width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+    #sandstorms .logo {
+        height: 200px;
+        width: 200px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    #sandstorms .content {
+        flex-direction: column;
+        align-items: center;
+    }
+    #sandstorms-carousel img {
+        width: 100%;
+        height: auto;
+    }
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        background-color: #bd1714;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    #sandstorms .content {
+        justify-content: space-between;
+        align-items: flex-start;
+        text-align: left;
+    }
+    #sandstorms .text {
+        width: 60%;
+    }
+    #sandstorms-carousel img {
+        width: 60%;
+        height: auto;
+    }
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        filter: invert(1);
+    }
+}
+
+
 /* Contact section */
 
 #contact .content {
