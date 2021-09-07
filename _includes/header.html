@@ -64,6 +64,9 @@
                             <a class="nav-link" href="{% if page.name != "index.html" or page.url contains "news/" %}/{% endif %}#resources">Resources</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link{% if page.name == "sandstorms.html" %} active" aria-current="page{% endif %}" href="/sandstorms">Sandstorms</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link{% if page.name == "index.html" and page.url contains "news/" %} active" aria-current="page{% endif %}" href="/news">News</a>
                         </li>
                         <li class="nav-item">
