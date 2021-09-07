@@ -40,10 +40,6 @@ body {
     text-transform: capitalize !important;
 }
 
-.text-transform-reset {
-    text-transform: none !important;
-}
-
 .normal {
     font-weight: normal !important;
 }
@@ -60,12 +56,12 @@ body {
     font-weight: 500 !important;
 }
 
-.semi-bold,
-strong {
+.semi-bold {
     font-weight: 600 !important;
 }
 
-.bold {
+.bold,
+strong {
     font-weight: 700 !important;
 }
 
@@ -83,7 +79,6 @@ em {
 }
 
 [data-bs-toggle="tooltip"] {
-    border-bottom: 1px dotted white;
     cursor: pointer;
 }
 
@@ -104,9 +99,17 @@ section:not(.landing):nth-child(even) {
     color: black;
 }
 
+section:not(.landing):nth-child(even) [data-bs-toggle="tooltip"] {
+    border-bottom: 1px dotted #111739 !important;
+}
+
 section:not(.landing):nth-child(odd) {
     background-color: #111739;
     color: white;
+}
+
+section:not(.landing):nth-child(odd) [data-bs-toggle="tooltip"] {
+    border-bottom: 1px dotted white !important;
 }
 
 section:not(.landing) .content {
@@ -373,6 +376,10 @@ a.blank-link:focus {
     width: 800px;
     height: auto;
     margin: 2rem 0;
+}
+
+.landing [data-bs-toggle="tooltip"] {
+    border-bottom: 1px dotted white !important;
 }
 
 @media only screen and (max-width: 991px) {
