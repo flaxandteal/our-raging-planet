@@ -469,12 +469,43 @@ a.blank-link:focus {
 #sandstorms .content {
     display: flex;
     width: 100%;
+    flex-direction: column;
+}
+
+#sandstorms .logos {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#sandstorms .logos #pmu {
+    height: 200px;
+    width: 200px;
+}
+
+@media only screen and (max-width: 767px) {
+    #sandstorms .logos {
+        flex-direction: column;
+    }
+    #sandstorms .logos #pmfcfs {
+        width: 100%;
+        height: auto;
+        margin-top: 1rem;
+    }
 }
 
 @media only screen and (min-width: 768px) {
-    #sandstorms .logo {
-        height: 200px;
-        width: 200px;
+    #sandstorms .logos {
+        justify-content: center;
+        align-items: center;
+    }
+    #sandstorms .logos img {
+        margin: 0 1rem;
+    }
+    #sandstorms .logos #pmfcfs {
+        height: 77px;
+        width: auto;
     }
 }
 
@@ -497,18 +528,10 @@ a.blank-link:focus {
     #sandstorms .content {
         justify-content: space-between;
         align-items: flex-start;
-        text-align: left;
-    }
-    #sandstorms .text {
-        width: 60%;
     }
     #sandstorms-carousel img {
         width: 60%;
         height: auto;
-    }
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-        filter: invert(1);
     }
 }
 
