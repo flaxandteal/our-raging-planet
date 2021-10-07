@@ -12,7 +12,20 @@
     <script type="text/javascript" src="/assets/js/jquery-visible/jquery.visible.min.js"></script>
 
     <!-- JAVASCRIPT / Local -->
-    <script type="text/javascript" src="/assets/js/main.js" async></script>{% if page.name == "contact.html" %}
+    <script type="text/javascript" src="/assets/js/main.js" async></script>
+    
+    <!-- JAVASCRIPT / Netlify CMS -->
+    <script>
+    if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+            if (!user) {
+                window.netlifyIdentity.on("login", () => {
+                    document.location.href = "/admin/";
+                });
+            }
+        });
+    }
+    </script>{% if page.name == "contact.html" %}
 
     <!-- JAVASCRIPT / Contact Form -->
     <script>
