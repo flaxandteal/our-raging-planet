@@ -20,7 +20,7 @@ layout: default
                             <li><span data-bs-toggle="tooltip" data-bs-placement="right" data-bs-html="true" title="This is an approximate figure calculated using the <code>strip_html</code> and <code>number_of_words</code> Liquid filters, and an average adult reading time of 250 words per minute.">{{ approx_read_time }} minute read</span></li>
                         </ul>
                     </div>
-                    <div class="post-img" style="background-image: url('/{% if page.metaImage %}{{ page.metaImage }}{% else %}assets/img/news/{{ page.date | date: "%Y-%m-%d" }}-{{ page.slug }}/meta.{% if page.metaImageExt %}{{ page.metaImageExt }}{% else %}jpg{% endif %}');{% if page.metaImagePosition %} background-position: {{ page.metaImagePosition }};{% else %} background-position: center;{% endif %}{% endif %}"></div>
+                    <div class="post-img" style="background-image: url('{% if page.metaImage %}{{ page.metaImage }}{% else %}/assets/img/news/{{ page.date | date: "%Y-%m-%d" }}-{{ page.slug }}/meta.{% if page.metaImageExt %}{{ page.metaImageExt }}{% else %}jpg{% endif %}{% endif %}');{% if page.metaImagePosition %} background-position: {{ page.metaImagePosition }};{% else %} background-position: center;{% endif %}{% if page.metaImageSize %} background-size: {{ page.metaImageSize }};{% else %} background-size: cover;{% endif %} background-repeat: no-repeat;"></div>
                 </div>
             </div>
         </section>
