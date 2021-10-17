@@ -79,13 +79,11 @@ defaults:
     values:
       layout: "post"
   - scope:
-      path: "_i18n/en"
-      type: "posts"
+      path: "en"
     values:
       lang: "en"
   - scope:
-      path: "_i18n/ar"
-      type: "posts"
+      path: "ar"
     values:
       lang: "ar"
 
