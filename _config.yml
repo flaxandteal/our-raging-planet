@@ -79,11 +79,7 @@ defaults:
     values:
       layout: "post"
   - scope:
-      path: "en"
-    values:
-      lang: "en"
-  - scope:
-      path: "ar"
+      path: "_posts/ar"
     values:
       lang: "ar"
 
