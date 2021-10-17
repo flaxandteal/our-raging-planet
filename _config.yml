@@ -41,6 +41,7 @@ plugins:
   - jekyll-category-pages
   - jekyll/tagging
   - jekyll-paginate
+  - jekyll-polyglot
 
 # Conversion
 markdown            : kramdown
@@ -60,6 +61,10 @@ show_dir_listing    : false
 paginate            : 5
 paginate_path       : /news/:num
 timezone            : Europe/London
+languages           : ["en", "ar"]
+exclude_from_localization: ["assets"]
+parallel_localization: false
+lang_from_path      : true
 
 quiet               : false
 verbose             : false
