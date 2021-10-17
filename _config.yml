@@ -41,7 +41,6 @@ plugins:
   - jekyll-category-pages
   - jekyll/tagging
   - jekyll-paginate
-  - jekyll-multiple-languages
 
 # Conversion
 markdown            : kramdown
