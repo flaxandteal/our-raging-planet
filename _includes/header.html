@@ -80,8 +80,17 @@
                             <li class="nav-item">
                                 <a class="nav-link dropdown-toggle" id="lang-selector" data-bs-toggle="dropdown" aria-expanded="false" href="#">Language</a>
                                 <ul class="dropdown-menu uppercase" aria-labelledby="lang-selector">
-                                    <li><a class="dropdown-item{% if site.active_lang == "en" %} disabled" aria-current="true" aria-disabled="true{% endif %}" href="#">{{ site.data[site.active_lang].lang.en }}</a></li>
-                                    <li><a class="dropdown-item{% if  site.active_lang == "ar" %} disabled" aria-current="true" aria-disabled="true{% endif %}" href="#">{{ site.data[site.active_lang].lang.ar }}</a></li>
+                                    {% for lang in site.languages %}
+                                        {% if lang == site.active_lang %}
+                                    <li><a class="dropdown-item disabled" aria-current="true" aria-disabled="true" href="#">{{ site.data[site.active_lang].lang[site.active_lang] }}</a></li>
+                                        {% else %}
+                                            {% if lang == site.default_lang %}
+                                    <li><a class="dropdown-item{% if site.active_lang == site.default_lang %} disabled" aria-current="true" aria-disabled="true{% endif %}" href="{% if site.active_lang != site.default_lang %} {{ page.url }}{% else %}#{% endif %}">{{ site.data[lang].lang[lang] }}</a></li>
+                                            {% else %}
+                                    <li><a class="dropdown-item{% if site.active_lang == lang %} disabled" aria-current="true" aria-disabled="true{% endif %}" href="{% if site.active_lang != lang %}/{{ lang }}{{ page.url }}{% else %}#{% endif %}">{{ site.data[lang].lang[lang] }}</a></li>
+                                            {% endif %}
+                                        {% endif %}
+                                    {% endfor %}
                                 </ul>
                             </li>
                         </div>
