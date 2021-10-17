@@ -1,0 +1,1 @@
+/{% if page.layout == "post" %}assets/img/news/{{ page.date | date: "%Y-%m-%d" }}-{{ page.slug }}/meta.{% if page.metaImageExt %}{{ page.metaImageExt }}{% else %}jpg{% endif %}{% elsif page.metaImage %}{{ page.metaImage }}{% else %}assets/img/ourragingplanet.png{% endif %}
