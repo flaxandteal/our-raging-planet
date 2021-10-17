@@ -13,7 +13,7 @@ slug:
   clean_accents: true
 
 collections:
-  - name: 'news/en'
+  - name: 'news-en'
     label: 'English posts'
     folder: '_posts/'
     create: true
@@ -43,7 +43,7 @@ collections:
       - { label: 'Meta Image Position', name: 'metaImagePosition', widget: 'string', default: "center", required: false }
       - { label: 'Meta Image Size', name: 'metaImageSize', widget: 'string', default: "cover", required: false }
       - { label: 'Slug', name: 'slug', widget: 'string' }
-  - name: 'news/ar'
+  - name: 'news-ar'
     label: 'Arabic posts'
     folder: '_posts/ar'
     create: true
