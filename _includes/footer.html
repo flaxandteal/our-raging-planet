@@ -9,10 +9,10 @@
 
     <!-- JAVASCRIPT / jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="/assets/js/jquery-visible/jquery.visible.min.js"></script>
+    <script type="text/javascript" src="{{ "/assets/js/jquery-visible/jquery.visible.min.js" | prepend: site.baseurl_root }}"></script>
 
     <!-- JAVASCRIPT / Local -->
-    <script type="text/javascript" src="/assets/js/main.js" async></script>
+    <script type="text/javascript" src="{{ "/assets/js/main.js" | prepend: site.baseurl_root }}" async></script>
     
     <!-- JAVASCRIPT / Netlify CMS -->
     <script>
