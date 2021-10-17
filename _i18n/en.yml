@@ -1,5 +1,6 @@
-global:
-  
+lang:
+  en: English
+  ar: Arabic
 pages:
   home: Home
   about: About
@@ -8,3 +9,11 @@ pages:
   sandstorms: Sandstorms
   news: News
   contact: Contact
+  language: Language
+  404: Page Not Found
+
+desc:
+  home: OurRagingPlanet assists teachers and educators in demonstrating the need for resilience and the implications of natural disasters upon local services and surroundings.
+  sandstorms: Learn more about our partnership with Prince Mohammad Bin Fahd University in Saudi Arabia.
+  news: Keep up to date with our latest news.
+  contact: Reach out to us today by filling out our contact form.
