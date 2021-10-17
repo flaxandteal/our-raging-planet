@@ -9,12 +9,16 @@ pages:
   features: Features
   resources: Resources
   sandstorms: Sandstorms
-  news: News
-  contact: Contact
+  news: أخبار
+  contact: اتصل
   language: Language
-  404: Page Not Found
+  404: الصفحة غير موجودة
 desc:
   home: OurRagingPlanet assists teachers and educators in demonstrating the need for resilience and the implications of natural disasters upon local services and surroundings.
   sandstorms: Learn more about our partnership with Prince Mohammad Bin Fahd University in Saudi Arabia.
-  news: Keep up to date with our latest news.
+  news: ابق على علم بآخر أخبارنا.
   contact: Reach out to us today by filling out our contact form.
+news:
+  latest: آخر المشاركات
+  by: كتبه
+  related: المنشورات ذات الصلة
