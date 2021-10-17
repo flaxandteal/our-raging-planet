@@ -75,6 +75,15 @@
                         <li class="nav-item">
                             <a class="nav-link{% if page.name == "contact.html" %} active" aria-current="page{% endif %}" href="/contact">Contact</a>
                         </li>
+                        <div class="dropdown">
+                            <li class="nav-item">
+                                <a class="nav-link dropdown-toggle" id="lang-selector" data-bs-toggle="dropdown" aria-expanded="false" href="#">Language</a>
+                                <ul class="dropdown-menu uppercase" aria-labelledby="lang-selector">
+                                    <li><a class="dropdown-item{% if page.language == "en" %} disabled" aria-current="true" aria-disabled="true{% endif %}" href="#">English</a></li>
+                                    <li><a class="dropdown-item{% if  page.language == "ar" %} disabled" aria-current="true" aria-disabled="true{% endif %}" href="#">Arabic</a></li>
+                                </ul>
+                            </li>
+                        </div>
                     </ul>
                 </div>
             </div>
