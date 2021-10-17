@@ -1,1 +1,1 @@
-{% t global.orp %}{% if page.title %} | {% if page.url contains "news/" and page.title != "News" %}{% t pages.news %} - {% endif %}{% t page.title %}{% endif %}
+Our Raging Planet{% if page.title %} | {% if page.url contains "news/" and page.title != "News" %}{% t pages.news %} - {% endif %}{{ page.title }}{% endif %}
