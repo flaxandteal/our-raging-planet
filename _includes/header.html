@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{% if page.language == "en" %}en-GB{% elsif page.language == "ar" %}ar-SA" dir="rtl{% endif %}">
+<html lang="{% if site.active_lang == "en" %}en-GB{% elsif site.active_lang == "ar" %}ar-SA" dir="rtl{% endif %}">
 
 <head>
     <title>{% include page-title.html %}</title>
@@ -37,7 +37,7 @@
     <link rel="stylesheet" type="text/css" href="/assets/css/news.css" />{% endif %}
 
     <!-- STYLESHEETS / Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">{% if page.language == "ar" %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">{% if site.active_lang == "ar" %}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css" integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N" crossorigin="anonymous">{% endif %}
 
     <!-- JAVASCRIPT / Netlify CMS -->
@@ -80,8 +80,8 @@
                             <li class="nav-item">
                                 <a class="nav-link dropdown-toggle" id="lang-selector" data-bs-toggle="dropdown" aria-expanded="false" href="#">Language</a>
                                 <ul class="dropdown-menu uppercase" aria-labelledby="lang-selector">
-                                    <li><a class="dropdown-item{% if page.language == "en" %} disabled" aria-current="true" aria-disabled="true{% endif %}" href="#">English</a></li>
-                                    <li><a class="dropdown-item{% if  page.language == "ar" %} disabled" aria-current="true" aria-disabled="true{% endif %}" href="#">Arabic</a></li>
+                                    <li><a class="dropdown-item{% if site.active_lang == "en" %} disabled" aria-current="true" aria-disabled="true{% endif %}" href="#">English</a></li>
+                                    <li><a class="dropdown-item{% if  site.active_lang == "ar" %} disabled" aria-current="true" aria-disabled="true{% endif %}" href="#">Arabic</a></li>
                                 </ul>
                             </li>
                         </div>
