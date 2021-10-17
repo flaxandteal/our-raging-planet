@@ -9,7 +9,7 @@
                 <p>{{ post.description }}</p>
             </div>
             <ul class="news-card-cat-date card-text">
-                <li class="text-muted date">{% if site.lang == "ar" %}{{ post.date | arabic_date }}{% else %}{{ post.date | date_to_long_string }}{% endif %}</li>
+                <li class="text-muted date">{% if site.active_lang == "ar" %}{{ post.date | arabic_date }}{% else %}{{ post.date | date_to_long_string }}{% endif %}</li>
                 <li class="text-muted category capitalize">{{ post.categories | first }}</li>
             </ul>
         </div>
