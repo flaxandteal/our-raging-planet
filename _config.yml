@@ -61,6 +61,9 @@ show_dir_listing    : false
 paginate            : 5
 paginate_path       : /news/:num
 timezone            : Europe/London
+languages           : ["en", "ar"]
+exclude_from_localizations : ["assets"]
+default_locale_in_subfolder : true
 
 quiet               : false
 verbose             : false
