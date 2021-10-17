@@ -216,22 +216,6 @@ nav .container-fluid {
     justify-content: space-around;
 }
 
-@media only screen and (max-width: 991px) {
-    .navbar-nav .dropdown-menu {
-        margin-bottom: 1rem !important;
-    }
-}
-
-@media only screen and (min-width: 992px) {
-    .navbar-nav .dropdown-menu {
-        top: 63px !important;
-    }
-}
-
-.navbar-nav .dropdown-item.disabled {
-    color: #adb5bd !important;
-}
-
 .nav-link {
     color: white !important;
     font-weight: 500;
@@ -278,10 +262,6 @@ header.scroll-top .nav-link:focus {
 #header-clear {
     display: none;
     height: 75px;
-}
-
-#lang-selector::after {
-    color: #808080;
 }
 
 
