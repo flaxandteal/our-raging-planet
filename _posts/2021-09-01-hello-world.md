@@ -5,6 +5,9 @@ author: [John Doe]
 
 category: sample3
 tags: [hello, world, planet sample]
+
+date: 2021-09-01T00:00:00.000Z
+slug: hello-world
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ex neque, luctus id maximus a, gravida sit amet sem. Sed et hendrerit nisi. Fusce rhoncus bibendum cursus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin eu lectus a dolor sagittis mattis. Nam erat leo, interdum vitae tempor nec, iaculis quis nisi. Sed dolor dui, convallis sed justo vel, accumsan hendrerit eros. Quisque vel sapien dui. Integer finibus aliquet placerat. Donec feugiat ante at tortor pulvinar commodo. In vulputate dictum mattis. Morbi vulputate nulla in dignissim dignissim. Cras sit amet justo ultrices arcu mattis mattis ac vel turpis. Vestibulum dui nisl, porttitor sit amet rutrum quis, molestie interdum metus.
 
