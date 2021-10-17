@@ -55,25 +55,25 @@
                 <div class="collapse navbar-collapse" id="top-menu">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link top"{% if page.name == "index.html" and page.dir == "/" %} aria-current="page"{% endif %} href="{% if page.name != "index.html" or page.url contains "news/" %}/{% endif %}#top">Home</a>
+                            <a class="nav-link top"{% if page.name == "index.html" and page.dir == "/" %} aria-current="page"{% endif %} href="{% if page.name != "index.html" or page.url contains "news/" %}/{% endif %}#top">{% t pages.home %}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% if page.name != "index.html" or page.url contains "news/" %}/{% endif %}#about">About</a>
+                            <a class="nav-link" href="{% if page.name != "index.html" or page.url contains "news/" %}/{% endif %}#about">{% t pages.about %}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% if page.name != "index.html" or page.url contains "news/" %}/{% endif %}#features">Features</a>
+                            <a class="nav-link" href="{% if page.name != "index.html" or page.url contains "news/" %}/{% endif %}#features">{% t pages.features %}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% if page.name != "index.html" or page.url contains "news/" %}/{% endif %}#resources">Resources</a>
+                            <a class="nav-link" href="{% if page.name != "index.html" or page.url contains "news/" %}/{% endif %}#resources">{% t pages.resources %}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link{% if page.name == "sandstorms.html" %} active" aria-current="page{% endif %}" href="/sandstorms">Sandstorms</a>
+                            <a class="nav-link{% if page.name == "sandstorms.html" %} active" aria-current="page{% endif %}" href="/sandstorms">{% t pages.sandstorms %}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link{% if page.name == "index.html" and page.url contains "news/" %} active" aria-current="page{% endif %}" href="/news">News</a>
+                            <a class="nav-link{% if page.name == "index.html" and page.url contains "news/" %} active" aria-current="page{% endif %}" href="/news">{% t pages.news %}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link{% if page.name == "contact.html" %} active" aria-current="page{% endif %}" href="/contact">Contact</a>
+                            <a class="nav-link{% if page.name == "contact.html" %} active" aria-current="page{% endif %}" href="/contact">{% t pages.contact %}</a>
                         </li>
                     </ul>
                 </div>
