@@ -13,7 +13,7 @@
     {% endfor %}
     {% if sameTagCount >= minCommonTags %}
 <div class="related-posts news-posts">
-    <h2 class="section-subtitle">Related posts</h2>
+    <h2 class="section-subtitle">{{ site.data[site.active_lang].news.related }}</h2>
     <div class="featured-stories row mt-0">
         {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
         {% if maxRelatedCounter == 1 %}
