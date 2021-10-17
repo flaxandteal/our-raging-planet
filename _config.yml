@@ -77,6 +77,16 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+  - scope:
+      path: "_i18n/en"
+      type: "posts"
+    values:
+      lang: "en"
+  - scope:
+      path: "_i18n/ar"
+      type: "posts"
+    values:
+      lang: "ar"
 
 liquid:
   error_mode        : warn
