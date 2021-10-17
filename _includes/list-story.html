@@ -1,5 +1,5 @@
 <div class="news-card d-flex">
-    <a class="blank-link" href="{{ post.url }}">
+    <a class="blank-link" href="{{ site.baseurl }}{{ post.url }}">
         <div class="card-img-container flex-shrink-0">
             <div class="news-card-img" style="background-image: url('{% if post.metaImage %}{{ post.metaImage }}{% else %}{{ "/assets" | prepend: site.baseurl_root }}/img/news/{{ post.date | date: "%Y-%m-%d" }}-{{ post.slug }}/meta.{% if post.metaImageExt %}{{ post.metaImageExt }}{% else %}jpg{% endif %}{% endif %}');{% if post.metaImagePosition %} background-position: {{ post.metaImagePosition }};{% else %} background-position: center;{% endif %}">&nbsp;</div>
         </div>
@@ -9,7 +9,7 @@
                 <p>{{ post.description }}</p>
             </div>
             <ul class="news-card-cat-date card-text">
-                <li class="text-muted date">{{ post.date | date_to_long_string }}</li>
+                <li class="text-muted date">{% if site.lang == "ar" %}{{ post.date | arabic_date }}{% else %}{{ post.date | date_to_long_string }}{% endif %}</li>
                 <li class="text-muted category capitalize">{{ post.categories | first }}</li>
             </ul>
         </div>

@@ -10,7 +10,7 @@ layout: default
                             <p class="caption">{{ page.description }}</p>
                         </div>
                         <ul class="post-info">
-                            <li>{{ page.date | date_to_long_string }}</li>
+                            <li>{% if site.lang == "ar" %}{{ page.date | arabic_date }}{% else %}{{ page.date | date_to_long_string }}{% endif %}</li>
                             <li id="category"><a href="/news/categories/{{ page.categories | first | downcase }}">{{ page.categories | first }}</a></li>
                             {% assign total_count = content | strip_html | number_of_words %}
                             {% assign approx_read_time = total_count | divided_by: 250 %}
