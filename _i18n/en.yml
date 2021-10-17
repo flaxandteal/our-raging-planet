@@ -1,0 +1,10 @@
+global:
+  
+pages:
+  home: Home
+  about: About
+  features: Features
+  resources: Resources
+  sandstorms: Sandstorms
+  news: News
+  contact: Contact
