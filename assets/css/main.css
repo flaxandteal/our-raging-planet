@@ -143,6 +143,11 @@ section:not(.landing):nth-child(odd) .section-title {
     margin: 1rem 0;
 }
 
+div:not(.news-posts) .section-title,
+div:not(.news-posts) .section-subtitle {
+    text-align: center !important;
+}
+
 #notfound #content-bg {
     height: 590px;
 }
@@ -472,6 +477,7 @@ a.blank-link:focus {
 .features-box h3 {
     font-weight: 700;
     margin: 1rem 0;
+    text-align: center !important;
 }
 
 .features-box p {
