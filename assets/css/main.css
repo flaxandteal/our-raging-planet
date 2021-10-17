@@ -228,6 +228,10 @@ nav .container-fluid {
     }
 }
 
+.navbar-nav .dropdown-item:active {
+    background-color: #adb5bd !important;
+}
+
 .navbar-nav .dropdown-item.disabled {
     color: #adb5bd !important;
 }
