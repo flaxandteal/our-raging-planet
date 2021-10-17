@@ -13,9 +13,39 @@ slug:
   clean_accents: true
 
 collections:
-  - name: 'news'
-    label: 'Posts'
+  - name: 'news/en'
+    label: 'English posts'
     folder: '_posts/'
+    create: true
+    sortable_fields: ['date', 'title', 'author']
+    slug: '{{year}}-{{month}}-{{day}}-{{fields.slug}}'
+    preview_path: '/news/{{year}}/{{month}}/{{day}}/{{title}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'post' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Author', name: 'author', widget: 'list' }
+      - {
+          label: 'Date',
+          name: 'date',
+          widget: 'datetime',
+          date_format: "DD-MM-YYYY",
+          time_format: "HH:mm",
+        }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Category', name: 'category', widget: 'string' }
+      - { label: 'Tags', name: 'tags', widget: 'list' }
+      - { label: 'Meta Image', name: 'metaImage', widget: 'image', choose_url: false }
+      # - { label: 'Meta Image Caption', name: 'caption', widget: 'string', required: false }
+      # - { label: 'Meta Image Extension', name: 'metaImageExt', widget: 'string', default: "jpg", required: false }
+      - { label: 'Meta Image Position', name: 'metaImagePosition', widget: 'string', default: "center", required: false }
+      - { label: 'Meta Image Size', name: 'metaImageSize', widget: 'string', default: "cover", required: false }
+      - { label: 'Slug', name: 'slug', widget: 'string' }
+  - name: 'news/ar'
+    label: 'Arabic posts'
+    folder: '_posts/ar'
     create: true
     sortable_fields: ['date', 'title', 'author']
     slug: '{{year}}-{{month}}-{{day}}-{{fields.slug}}'
