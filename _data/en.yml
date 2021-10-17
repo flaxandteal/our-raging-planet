@@ -22,3 +22,6 @@ post:
   latest: Latest posts
   by: by
   related: Related posts
+footer:
+  copy: <span class="site-red">&copy;</span> <span id="current-year">0000</span> OurRagingPlanet. All rights reserved.
+  dev: Website designed by <a href="http://davyk17.github.io/" target="_blank">Davy Kamanzi</a>

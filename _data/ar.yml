@@ -11,7 +11,7 @@ pages:
   sandstorms: Sandstorms
   news: أخبار
   contact: اتصل
-  language: Language
+  language: لغة
   404: الصفحة غير موجودة
 desc:
   home: OurRagingPlanet assists teachers and educators in demonstrating the need for resilience and the implications of natural disasters upon local services and surroundings.
@@ -22,3 +22,6 @@ news:
   latest: آخر المشاركات
   by: كتبه
   related: المنشورات ذات الصلة
+footer:
+  copy: <span class="site-red">&copy;</span> <span id="current-year">0000</span> OurRagingPlanet. All rights reserved.
+  dev: Website designed by <a href="http://davyk17.github.io/" target="_blank">Davy Kamanzi</a>
