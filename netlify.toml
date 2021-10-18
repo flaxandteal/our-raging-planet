@@ -4,6 +4,11 @@
   status = 200
 
 [[redirects]]
+  from = "/ar/blog/*"
+  to = "/ar/news/:splat"
+  status = 200
+
+[[redirects]]
   from = "/ar/*"
   to = "/ar/404.html"
   status = 404
