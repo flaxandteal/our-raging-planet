@@ -1,2 +1,3 @@
-/ar/* /404.ar.html 404
-/* /404.html 404
+/blog/*  /news/:splat
+/ar/*    /404.ar.html   404
+/*       /404.html      404
