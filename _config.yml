@@ -22,7 +22,7 @@ tag_page_layout     : tag
 # Handling Reading
 safe                : false
 include             : [".htaccess"]
-exclude             : [".sass-cache/", ".jekyll-cache/", "gemfiles/", "Gemfile", "Gemfile.lock", "node_modules", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/"]
+exclude             : [".sass-cache/", ".jekyll-cache/", "gemfiles/", "Gemfile", "Gemfile.lock", "node_modules", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/", "_redirects"]
 keep_files          : [".git", ".svn"]
 encoding            : "utf-8"
 markdown_ext        : "markdown,mkdown,mkdn,mkd,md"
