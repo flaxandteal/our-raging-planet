@@ -5,7 +5,7 @@
 
 [[redirects]]
   from = "/ar/*"
-  to = "/404.ar.html"
+  to = "/ar/404.html"
   status = 404
   force = true
 
