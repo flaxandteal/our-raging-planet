@@ -1,5 +1,5 @@
-ErrorDocument 404 /404.html
-
 <Directory "/ar">
-  ErrorDocument 404 /404.ar.html
+  ErrorDocument 404 /ar/404.html
 </Directory>
+
+ErrorDocument 404 /404.html
