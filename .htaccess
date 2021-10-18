@@ -1,0 +1,7 @@
+AllowOverride All
+
+ErrorDocument 404 /404.html
+
+<Directory "/ar">
+  ErrorDocument 404 /404.ar.html
+</Directory>
