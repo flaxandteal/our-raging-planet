@@ -17,3 +17,13 @@ li,
 input {
     direction: rtl !important;
 }
+
+.carousel-control-next {
+    right: unset !important;
+    left: 0 !important;
+}
+
+.carousel-item {
+    margin-inline-start: unset !important;
+    margin-left: unset !important;
+}
