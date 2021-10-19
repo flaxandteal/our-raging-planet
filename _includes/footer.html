@@ -47,15 +47,13 @@
                 });
                 if (response) {
                     form.style.display = "none";
-                    formSuccess.style.display = "block";{% case site.active_lang %}{% when "en" %}
-                    formSuccess.innerHTML = "Thanks for your submission! We will get back to you soon.";{% when "ar" %}
-                    formSuccess.innerHTML = "Shukran for your submission! We will get back to you soon.";{% endcase %}
+                    formSuccess.style.display = "block";
+                    formSuccess.innerHTML = "{{ site.data[site.active_lang].contact.success }}";
                     form.reset();
                 }
             } catch (error) {
-                formError.style.display = "block";{% case site.active_lang %}{% when "en" %}
-                formError.innerHTML = "There was a problem submitting your form. Kindly try again.";{% when "ar" %}
-                formError.innerHTML = "There was a mushkila submitting your form. Kindly try again.";{% endcase %}
+                formError.style.display = "block";
+                formError.innerHTML = "{{ site.data[site.active_lang].contact.error }}";
             }
         }
 
