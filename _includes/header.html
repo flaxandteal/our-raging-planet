@@ -69,13 +69,13 @@
                             <a class="nav-link" href="{% include index-section-link.html %}#resources">{{ site.data[site.active_lang].pages.resources }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link{% if page.name == "sandstorms.html" %} active" aria-current="page{% endif %}" href="/sandstorms">{{ site.data[site.active_lang].pages.sandstorms }}</a>
+                            <a class="nav-link{% if page.name contains "sandstorms" and page.name contains ".html" %} active" aria-current="page{% endif %}" href="/sandstorms">{{ site.data[site.active_lang].pages.sandstorms }}</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link{% if page.name == "index.html" and page.url contains "news/" %} active" aria-current="page{% endif %}" href="/news">{{ site.data[site.active_lang].pages.news }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link{% if page.name == "contact.html" %} active" aria-current="page{% endif %}" href="/contact">{{ site.data[site.active_lang].pages.contact }}</a>
+                            <a class="nav-link{% if page.name contains "contact" and page.name contains ".html" %} active" aria-current="page{% endif %}" href="/contact">{{ site.data[site.active_lang].pages.contact }}</a>
                         </li>
                         <div class="dropdown">
                             <li class="nav-item">
@@ -86,9 +86,9 @@
                                     <li><a class="dropdown-item disabled" aria-current="true" aria-disabled="true" href="#">{{ site.data[site.active_lang].lang[site.active_lang] }}</a></li>
                                         {% else %}
                                             {% if lang == site.default_lang %}
-                                    <li><a class="dropdown-item{% if site.active_lang == site.default_lang %} disabled" aria-current="true" aria-disabled="true{% endif %}" href="{% if site.active_lang != site.default_lang %}{% if page.path contains "404.html" or page.path contains "404.ar.html" %}../{% else %} {{ page.url }}{% endif %}{% else %}#{% endif %}">{{ site.data[lang].lang[lang] }}</a></li>
+                                    <li><a class="dropdown-item{% if site.active_lang == site.default_lang %} disabled" aria-current="true" aria-disabled="true{% endif %}" href="{% if site.active_lang != site.default_lang %}{% if page.path contains "404" and page.path contains ".html" %}../{% else %} {{ page.url }}{% endif %}{% else %}#{% endif %}">{{ site.data[lang].lang[lang] }}</a></li>
                                             {% else %}
-                                    <li><a class="dropdown-item{% if site.active_lang == lang %} disabled" aria-current="true" aria-disabled="true{% endif %}" href="{% if site.active_lang != lang %}/{{ lang }}{% if page.path contains "404.html" or page.path contains "404.ar.html" %}{% else %}{{ page.url }}{% endif %}{% else %}#{% endif %}">{{ site.data[lang].lang[lang] }}</a></li>
+                                    <li><a class="dropdown-item{% if site.active_lang == lang %} disabled" aria-current="true" aria-disabled="true{% endif %}" href="{% if site.active_lang != lang %}/{{ lang }}{% if page.path contains "404" and page.path contains ".html" %}{% else %}{{ page.url }}{% endif %}{% else %}#{% endif %}">{{ site.data[lang].lang[lang] }}</a></li>
                                             {% endif %}
                                         {% endif %}
                                     {% endfor %}
