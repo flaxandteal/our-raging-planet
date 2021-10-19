@@ -22,6 +22,9 @@ news:
   latest: آخر المشاركات
   by: كتبه
   related: المنشورات ذات الصلة
+contact:
+  success: Shukran for your submission! We will get back to you soon.
+  error: There was a mushkila submitting your form. Kindly try again.
 footer:
   copy: <span class="site-red">&copy;</span> <span id="current-year">0000</span> OurRagingPlanet. All rights reserved.
   dev: Website designed by <a href="http://davyk17.github.io/" target="_blank">Davy Kamanzi</a>
