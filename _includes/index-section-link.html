@@ -1,1 +1,1 @@
-{% if page.name == "index.html" and page.dir != "/" %}{% if site.active_lang != "en" %}/{{ site.active_lang }}/{% endif %}{% if site.active_lang == site.default_lang and page.name != "index.html" or page.url contains "news/" %}/{% endif %}{% endif %}
+{% if page.path != "index.html" %}{% if site.active_lang != site.default_lang %}/{{ site.active_lang }}/{% endif %}{% if site.active_lang == site.default_lang and page.name != "index.html" or page.url contains "news/" %}/{% endif %}{% endif %}
