@@ -389,6 +389,7 @@ a.blank-link:focus {
 
 .landing h1,
 .landing .caption {
+    text-align: center !important;
     filter: drop-shadow(0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.5))
 }
 
@@ -534,6 +535,10 @@ a.blank-link:focus {
     display: flex;
     width: 100%;
     flex-direction: column;
+}
+
+#sandstorms p {
+    text-align: center !important;
 }
 
 #sandstorms .logos {
