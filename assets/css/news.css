@@ -171,7 +171,8 @@
     }
 }
 
-.post-header,
+.post-header h1,
+.post-header .caption,
 .post-info {
     text-align: left !important;
 }

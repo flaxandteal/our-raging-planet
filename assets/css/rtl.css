@@ -10,10 +10,9 @@ li,
 .news-posts,
 .news-card-title,
 .news-card-cat-date,
-.post-info {
-    text-align: right !important;
-}
-
+.post-header h1,
+.post-header .caption,
+.post-info,
 section:not(.landing) .content-head .section-title,
 section:not(.landing) .content-head .section-subtitle {
     text-align: right !important;
