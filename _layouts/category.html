@@ -11,7 +11,7 @@ layout: default
         </section>
         <section class="news-posts light">
             <div class="content">
-                <h2>All posts in "<span class="capitalize">{{ page.title }}</span>"</h2>
+                <h2 class="site-darkblue">All posts in "<span class="capitalize">{{ page.title }}</span>"</h2>
                 {% assign this_cat = page.title %}
                 {% assign paginator = page.paginator %}
                 {% for post in paginator.posts %}

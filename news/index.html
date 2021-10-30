@@ -18,7 +18,7 @@ description:
         </section>
         <section class="news-posts light">
             <div class="content">
-                <h2>{{ site.data[site.active_lang].news.latest }}</h2>
+                <h2 class="site-darkblue">{{ site.data[site.active_lang].news.latest }}</h2>
                 {% for post in paginator.posts %}
                     {% include list-story.html %}
                 {% endfor %}
