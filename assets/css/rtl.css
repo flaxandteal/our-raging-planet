@@ -31,3 +31,8 @@ input {
     margin-inline-start: unset !important;
     margin-left: unset !important;
 }
+
+#features img {
+    right: unset !important;
+    left: 15%;
+}
