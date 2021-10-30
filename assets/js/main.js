@@ -116,6 +116,12 @@ const trimAuthorSpace = () => {
     }
 }
 
+// DEMO VIDEO BEHAVIOUR
+
+$("#video-modal").on("show.bs.collapse", () => {
+    $("#top-video")[0].play();
+});
+
 // READY DOCUMENT FUNCTION CALLS 
 
 $(document).ready(() => {
