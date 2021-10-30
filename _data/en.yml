@@ -1,5 +1,6 @@
 global:
   orp: Our Raging Planet
+  logo: logo-text-light.svg
 lang:
   en: English
   ar: اَلْعَرَبِيَّةُ
@@ -10,7 +11,7 @@ pages:
   resources: Resources
   sandstorms: Sandstorms
   news: News
-  contact: Contact
+  contact: Contact Us
   language: Language
   404: Page Not Found
 desc:
