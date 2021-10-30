@@ -238,7 +238,7 @@
 
 .post-top #category a:hover,
 .post-top #category a:focus {
-    color: white !important;
+    color: #e7201d !important;
     transition: color 0.15s ease-in-out;
 }
 
