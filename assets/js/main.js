@@ -15,6 +15,12 @@ const fadeZoom = () => {
 
 $(window).on("load", fadeZoom);
 
+// SCROLL TO TOP BUTTON BEHAVIOUR
+
+const scrollToTop = () => {
+    window.scrollTo(0, 0);
+}
+
 // MENU SCROLL BEHAVIOUR
 
 const menuScrollHandler = () => {
@@ -24,9 +30,11 @@ const menuScrollHandler = () => {
     if (scroll >= topHeight) {
         $("header").removeClass("scroll-top", 250, "easeInBack");
         $("#header-clear").show();
+        $(".btn-scroll-top").show();
     } else {
         $("header").addClass("scroll-top", 250, "easeInBack");
         $("#header-clear").hide();
+        $(".btn-scroll-top").hide();
     }
 }
 
