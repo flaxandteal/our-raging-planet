@@ -78,6 +78,10 @@ em {
     color: #111739;
 }
 
+.site-gray {
+    color: #c0c0c0;
+}
+
 [data-bs-toggle="tooltip"] {
     cursor: pointer;
 }
@@ -94,21 +98,21 @@ section:not(.landing) {
     text-align: center;
 }
 
-section:not(.landing):nth-child(even) {
+section:not(.landing).light {
     background-color: white;
     color: black;
 }
 
-section:not(.landing):nth-child(even) [data-bs-toggle="tooltip"] {
+section:not(.landing).light [data-bs-toggle="tooltip"] {
     border-bottom: 1px dotted #111739 !important;
 }
 
-section:not(.landing):nth-child(odd) {
+section:not(.landing).dark {
     background-color: #111739;
     color: white;
 }
 
-section:not(.landing):nth-child(odd) [data-bs-toggle="tooltip"] {
+section:not(.landing).dark [data-bs-toggle="tooltip"] {
     border-bottom: 1px dotted white !important;
 }
 
@@ -128,11 +132,11 @@ section:not(.landing) .content {
     margin: 1rem 0;
 }
 
-section:not(.landing):nth-child(even) .section-title {
+section:not(.landing).light .section-title {
     color: #111739;
 }
 
-section:not(.landing):nth-child(odd) .section-title {
+section:not(.landing).dark .section-title {
     color: #c0c0c0;
 }
 
@@ -164,32 +168,50 @@ div:not(.news-posts) .section-subtitle {
 
 header {
     position: fixed;
+    background-color: #111739;
     width: 100%;
+    height: auto;
     z-index: 100;
 }
 
 nav {
-    background-color: #111739;
-    font-family: "Open Sans Condensed", sans-serif !important;
-    font-size: 1.75rem;
+    max-width: 1100px;
     height: 75px;
+    font-family: "Open Sans Condensed", sans-serif !important;
+    font-size: 1.5rem;
+    margin: auto;
     padding: 1rem 0;
 }
 
-nav .container-fluid {
+@media only screen and (max-width: 1199px) {
+    nav {
+        padding: 1rem;
+    }
+}
+
+.navbar-menu {
     height: auto;
     padding: 0 1rem !important;
 }
 
-.navbar-brand {
-    height: 40px;
-    width: auto;
+.navbar-logo {
+    width: fit-content;
+    height: fit-content;
+    margin: unset !important;
     padding: unset !important;
 }
 
-.navbar-brand img {
-    height: inherit;
+.navbar-logo img {
+    height: 40px;
     width: auto;
+    opacity: 0.75;
+    transition: opacity 0.25s ease-in-out;
+}
+
+.navbar-logo:hover img,
+.navbar-logo:focus img {
+    opacity: 1;
+    transition: opacity 0.25s ease-in-out;
 }
 
 .navbar-toggler {
@@ -284,6 +306,28 @@ header.scroll-top .nav-link:focus {
     }
 }
 
+.lang-select button {
+    background-color: white !important;
+    text-transform: uppercase;
+}
+
+.lang-select .dropdown-menu .dropdown-item:not(.disabled) {
+    color: #bd1714;
+}
+
+.btn-scroll-top {
+    display: none;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 5rem;
+    right: 2rem;
+    padding: unset !important;
+    background-color: #bd1714 !important;
+    border-radius: 100% !important;
+    z-index: 1000;
+}
+
 #header-clear {
     display: none;
     height: 75px;
@@ -299,7 +343,7 @@ header.scroll-top .nav-link:focus {
 footer {
     display: flex;
     position: relative;
-    background-color: #111739;
+    background-color: hsl(231, 54%, 5%);
     color: white !important;
     padding: 1rem;
     justify-content: space-between;
@@ -323,26 +367,29 @@ footer p {
 
 /* Main elements */
 
-a {
+main a,
+footer a {
     color: #bd1714 !important;
     text-decoration: none !important;
     transition: color 0.15s ease-in-out;
 }
 
-a:hover,
-a:focus {
+main a:hover,
+main a:focus,
+footer a:hover,
+footer a:focus {
     color: #e7201d !important;
     transition: color 0.15s ease-in-out;
 }
 
-a.blank-link {
+main a.blank-link {
     color: inherit !important;
     text-decoration: none !important;
     transition: none;
 }
 
-a.blank-link:hover,
-a.blank-link:focus {
+main a.blank-link:hover,
+main a.blank-link:focus {
     color: none !important;
     transition: none;
 }
