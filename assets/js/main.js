@@ -122,6 +122,10 @@ $("#video-modal").on("show.bs.collapse", () => {
     $("#top-video")[0].play();
 });
 
+$("#video-modal").on("hidden.bs.collapse", () => {
+    $("#top-video")[0].stop();
+});
+
 // READY DOCUMENT FUNCTION CALLS 
 
 $(document).ready(() => {
