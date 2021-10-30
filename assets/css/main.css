@@ -319,7 +319,7 @@ header.scroll-top .nav-link:focus {
     color: #bd1714;
 }
 
-.btn-scroll-top {
+.btn.btn-scroll-top {
     display: none;
     position: fixed;
     width: 50px;
