@@ -123,7 +123,8 @@ $("#video-modal").on("show.bs.collapse", () => {
 });
 
 $("#video-modal").on("hidden.bs.collapse", () => {
-    $("#top-video")[0].stop();
+    $("#top-video")[0].pause();
+    $("#top-video")[0].currentTime = 0;
 });
 
 // READY DOCUMENT FUNCTION CALLS 
