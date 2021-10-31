@@ -68,14 +68,14 @@
 }
 
 .news-card .card-body .news-card-title {
-    color: #bd1714;
+    color: #3A3E53;
     font-size: 1.5rem;
     transition: color 0.2s linear;
 }
 
 .news-card a:hover .card-body .news-card-title,
 .news-card a:focus .card-body .news-card-title {
-    color: #e7201d;
+    color: #565865;
     transition: color 0.2s linear;
 }
 
@@ -128,8 +128,8 @@
 }
 
 .pagination li.active a {
-    background-color: #bd1714 !important;
-    border-color: #bd1714 !important;
+    background-color: #3A3E53 !important;
+    border-color: #3A3E53 !important;
     color: white !important;
 }
 
@@ -239,7 +239,7 @@
 
 .post-top #category a:hover,
 .post-top #category a:focus {
-    color: #e7201d !important;
+    color: #111739 !important;
     transition: color 0.15s ease-in-out;
 }
 

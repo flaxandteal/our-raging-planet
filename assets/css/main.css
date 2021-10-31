@@ -355,7 +355,7 @@ header.scroll-top .nav-link:focus {
 
 .lang-select button {
     background-color: white !important;
-    color: #3A3E53 !important;
+    color: #111739 !important;
     text-transform: uppercase;
 }
 
@@ -369,7 +369,7 @@ header.scroll-top .nav-link:focus {
 }
 
 .lang-select .dropdown-item:not(.disabled) {
-    color: #3A3E53;
+    color: #111739;
 }
 
 .lang-select .dropdown-item.disabled {
@@ -492,14 +492,14 @@ footer .inner .copy p {
 /* Main elements */
 
 main a {
-    color: #3A3E53 !important;
+    color: #888B9C !important;
     text-decoration: none !important;
     transition: color 0.15s ease-in-out;
 }
 
 main a:hover,
 main a:focus {
-    color: #565865 !important;
+    color: #111739 !important;
     transition: color 0.15s ease-in-out;
 }
 
