@@ -212,10 +212,11 @@ section:not(.landing).darkish .section-title {
     margin: 1rem 0;
 }
 
-div:not(.news-posts) .section-title,
+
+/* div:not(.news-posts) .section-title,
 div:not(.news-posts) .section-subtitle {
     text-align: center !important;
-}
+} */
 
 #notfound .content-bg {
     height: 590px;
