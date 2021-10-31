@@ -818,56 +818,60 @@ main h6 {
 
 /* Project Sandstorms section */
 
-#sandstorms .content {
+#sandstorms-two {
+    background-color: #888B9C;
+}
+
+#sandstorms-one .content,
+#sandstorms-two .content {
     display: flex;
     width: 100%;
-    flex-direction: column;
 }
 
-#sandstorms p {
-    text-align: center !important;
-}
 
-#sandstorms .logos {
+/* #sandstorms-one .logos {
     display: flex;
     width: 100%;
     justify-content: center;
     align-items: center;
-}
+} */
 
-#sandstorms .logos #pmu {
+#sandstorms-one img {
     height: 200px;
     width: 200px;
 }
 
+#sandstorms-two img {
+    height: 175px;
+    width: 175px;
+}
+
 @media only screen and (max-width: 767px) {
-    #sandstorms .logos {
-        flex-direction: column;
-    }
-    #sandstorms .logos #pmfcfs {
+    #sandstorms-two img {
         width: 100%;
         height: auto;
-        margin-top: 1rem;
     }
 }
 
-@media only screen and (min-width: 768px) {
-    #sandstorms .logos {
+
+/* @media only screen and (min-width: 768px) {
+    #sandstorms-one .logos {
         justify-content: center;
         align-items: center;
     }
-    #sandstorms .logos img {
+    #sandstorms-one .logos img {
         margin: 0 1rem;
     }
-    #sandstorms .logos #pmfcfs {
+    #sandstorms-one .logos #pmfcfs {
         height: 77px;
         width: auto;
     }
-}
+} */
 
 @media only screen and (max-width: 991px) {
-    #sandstorms .content {
-        flex-direction: column;
+    #sandstorms-one .content,
+    #sandstorms-two .content {
+        flex-direction: column-reverse;
         align-items: center;
     }
     #sandstorms-carousel img {
@@ -881,9 +885,14 @@ main h6 {
 }
 
 @media only screen and (min-width: 992px) {
-    #sandstorms .content {
+    #sandstorms-one .content {
         justify-content: space-between;
-        align-items: flex-start;
+        align-items: center;
+    }
+    #sandstorms-two .content {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
     }
     #sandstorms-carousel img {
         width: 60%;
