@@ -16,6 +16,11 @@ section:not(.landing) .content-head .section-subtitle {
     margin-right: unset !important;
 }
 
+.btn.btn-scroll-top {
+    right: unset !important;
+    left: 2rem;
+}
+
 input {
     direction: rtl !important;
 }
