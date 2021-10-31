@@ -10,8 +10,16 @@ li,
 .news-posts,
 .news-card-title,
 .news-card-cat-date,
-.post-info {
+.post-header h1,
+.post-header .caption,
+.post-info,
+section:not(.landing) .content-head .section-title,
+section:not(.landing) .content-head .section-subtitle {
     text-align: right !important;
+}
+
+.navbar-logo.me-auto {
+    margin-right: unset !important;
 }
 
 input {
@@ -26,4 +34,9 @@ input {
 .carousel-item {
     margin-inline-start: unset !important;
     margin-left: unset !important;
+}
+
+#features>img {
+    right: unset !important;
+    left: 5%;
 }

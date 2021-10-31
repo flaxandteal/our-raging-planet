@@ -45,60 +45,58 @@
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 
-<body{% if page.name == "index.html" and page.dir == "/" %} data-bs-spy="scroll" data-bs-target="#top-menu" data-bs-offset="0" tabindex="0"{% endif %}>
+<body{% comment %}{% if page.name == "index.html" and page.dir == "/" %} data-bs-spy="scroll" data-bs-target="#top-menu" data-bs-offset="0" tabindex="0"{% endif %}{% endcomment %}>
     <div id="top"></div>
     <header class="scroll-top">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="/"><img class="navbar-logo" src="/assets/img/logos/logo-text-light.svg" alt="Our Raging Planet logo" /></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#top-menu" aria-controls="topmenu" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"><img src="/assets/img/icons/menu.svg" alt="" /></span>
-                </button>
-                <div class="collapse navbar-collapse" id="top-menu">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link top"{% if page.name == "index.html" and page.dir == "/" %} aria-current="page"{% endif %} href="{% include index-section-link.html %}#top">{{ site.data[site.active_lang].pages.home }}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% include index-section-link.html %}#about">{{ site.data[site.active_lang].pages.about }}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% include index-section-link.html %}#features">{{ site.data[site.active_lang].pages.features }}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% include index-section-link.html %}#resources">{{ site.data[site.active_lang].pages.resources }}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link{% if page.name contains "sandstorms" and page.name contains ".html" %} active" aria-current="page{% endif %}" href="/sandstorms">{{ site.data[site.active_lang].pages.sandstorms }}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link{% if page.name == "index.html" and page.url contains "news/" %} active" aria-current="page{% endif %}" href="/news">{{ site.data[site.active_lang].pages.news }}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link{% if page.name contains "contact" and page.name contains ".html" %} active" aria-current="page{% endif %}" href="/contact">{{ site.data[site.active_lang].pages.contact }}</a>
-                        </li>
-                        <div class="dropdown">
-                            <li class="nav-item">
-                                <a class="nav-link dropdown-toggle" id="lang-selector" data-bs-toggle="dropdown" aria-expanded="false" href="#">{{ site.data[site.active_lang].pages.language }}</a>
-                                <ul class="dropdown-menu uppercase" aria-labelledby="lang-selector">
-                                    {% for lang in site.languages %}
-                                        {% if lang == site.active_lang %}
-                                    <li><a class="dropdown-item disabled" aria-current="true" aria-disabled="true" href="#">{{ site.data[site.active_lang].lang[site.active_lang] }}</a></li>
-                                        {% else %}
-                                            {% if lang == site.default_lang %}
-                                    <li><a class="dropdown-item{% if site.active_lang == site.default_lang %} disabled" aria-current="true" aria-disabled="true{% endif %}" href="{% if site.active_lang != site.default_lang %}{% if page.path contains "404" and page.path contains ".html" %}../{% else %} {{ page.url }}{% endif %}{% else %}#{% endif %}">{{ site.data[lang].lang[lang] }}</a></li>
-                                            {% else %}
-                                    <li><a class="dropdown-item{% if site.active_lang == lang %} disabled" aria-current="true" aria-disabled="true{% endif %}" href="{% if site.active_lang != lang %}/{{ lang }}{% if page.path contains "404" and page.path contains ".html" %}{% else %}{{ page.url }}{% endif %}{% else %}#{% endif %}">{{ site.data[lang].lang[lang] }}</a></li>
-                                            {% endif %}
-                                        {% endif %}
-                                    {% endfor %}
-                                </ul>
-                            </li>
-                        </div>
-                    </ul>
-                </div>
+        <nav class="navbar navbar-expand-xl">
+            <a class="navbar-brand navbar-logo d-block d-md-none me-auto" href="/"><img src="/assets/img/logos/logo.svg" alt="Our Raging Planet logo" /></a>
+            <a class="navbar-brand navbar-logo d-none d-md-block me-auto" href="/"><img src="/assets/img/logos/{{ site.data[site.active_lang].global.logo }}" alt="Our Raging Planet logo" /></a>
+            <div class="dropdown lang-select order-xl-3">
+                <button class="btn dropdown-toggle uppercase" id="lang-selector" data-bs-toggle="dropdown" aria-expanded="false" href="#">{{ site.data[site.active_lang].lang[site.active_lang] }}</button>
+                <ul class="dropdown-menu uppercase" aria-labelledby="lang-selector">
+                    {% for lang in site.languages %}
+                        {% if lang == site.active_lang %}
+                    <li><a class="dropdown-item disabled" aria-current="true" aria-disabled="true" href="#">{{ site.data[site.active_lang].lang[site.active_lang] }}</a></li>
+                        {% else %}
+                            {% if lang == site.default_lang %}
+                    <li><a class="dropdown-item{% if site.active_lang == site.default_lang %} disabled" aria-current="true" aria-disabled="true{% endif %}" href="{% if site.active_lang != site.default_lang %}{% if page.path contains "404" and page.path contains ".html" %}../{% else %} {{ page.url }}{% endif %}{% else %}#{% endif %}">{{ site.data[lang].lang[lang] }}</a></li>
+                            {% else %}
+                    <li><a class="dropdown-item{% if site.active_lang == lang %} disabled" aria-current="true" aria-disabled="true{% endif %}" href="{% if site.active_lang != lang %}/{{ lang }}{% if page.path contains "404" and page.path contains ".html" %}{% else %}{{ page.url }}{% endif %}{% else %}#{% endif %}">{{ site.data[lang].lang[lang] }}</a></li>
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+            <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#top-menu" aria-controls="topmenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><img src="/assets/img/icons/menu.svg" alt="" /></span>
+            </button>
+            <div class="collapse navbar-collapse" id="top-menu">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link top"{% if page.name == "index.html" and page.dir == "/" %} aria-current="page"{% endif %} href="/">{{ site.data[site.active_lang].pages.home }}</a>
+                    </li><!--
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% include index-section-link.html %}#about">{{ site.data[site.active_lang].pages.about }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% include index-section-link.html %}#features">{{ site.data[site.active_lang].pages.features }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% include index-section-link.html %}#resources">{{ site.data[site.active_lang].pages.resources }}</a>
+                    </li>-->
+                    <li class="nav-item">
+                        <a class="nav-link{% if page.name contains "sandstorms" and page.name contains ".html" %} active" aria-current="page{% endif %}" href="/sandstorms">{{ site.data[site.active_lang].pages.sandstorms }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link{% if page.url contains "news/" %} active" aria-current="page{% endif %}" href="/news">{{ site.data[site.active_lang].pages.news }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link{% if page.name contains "contact" and page.name contains ".html" %} active" aria-current="page{% endif %}" href="/contact">{{ site.data[site.active_lang].pages.contact }}</a>
+                    </li>
+                </ul>
             </div>
         </nav>
     </header>
     <div id="header-clear"></div>
     <main>
+        <button class="btn btn-scroll-top" onClick="scrollToTop()"><img src="/assets/img/icons/up.svg" /></button>

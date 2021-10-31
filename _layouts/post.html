@@ -2,7 +2,7 @@
 layout: default
 ---
         <section class="landing">
-            <div id="content-bg">
+            <div class="content-bg">
                 <div class="content post-landing">
                     <div class="post-top">
                         <div class="post-header">
@@ -24,35 +24,36 @@ layout: default
                 </div>
             </div>
         </section>
-        <section>
-            <div class="post-content-top">    
-                <p class="section-subtitle">{{ site.data[site.active_lang].news.by }} {% include post-author.html %}</p>
-                <!-- AddToAny BEGIN -->
-                <div class="post-share a2a_kit a2a_kit_size_32 a2a_default_style">
-                    <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
-                    <a class="a2a_button_facebook"></a>
-                    <a class="a2a_button_twitter"></a>
-                    <a class="a2a_button_whatsapp"></a>
-                    <a class="a2a_button_telegram"></a>
-                    <a class="a2a_button_email"></a>
+        <section class="light">
+            <div class="content-bg">
+                <div class="post-content-top">
+                    <p class="section-subtitle">{{ site.data[site.active_lang].news.by }} {% include post-author.html %}</p>
+                    <!-- AddToAny BEGIN -->
+                    <div class="post-share a2a_kit a2a_kit_size_32 a2a_default_style">
+                        <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+                        <a class="a2a_button_facebook"></a>
+                        <a class="a2a_button_twitter"></a>
+                        <a class="a2a_button_whatsapp"></a>
+                        <a class="a2a_button_telegram"></a>
+                        <a class="a2a_button_email"></a>
+                    </div>
+                    <script>
+                        var a2a_config = a2a_config || {};
+                        a2a_config.onclick = 1;
+                        a2a_config.num_services = 4;
+                    </script>
+                    <script src="https://static.addtoany.com/menu/page.js" async></script>
+                    <!-- AddToAny END -->
                 </div>
-                <script>
-                    var a2a_config = a2a_config || {};
-                    a2a_config.onclick = 1;
-                    a2a_config.num_services = 4;
-                </script>
-                <script src="https://static.addtoany.com/menu/page.js" async></script>
-                <!-- AddToAny END -->
+                <article class="text-start">
+                    {{ content }}
+                </article>
+                <ul class="post-info post-tags">
+                    <p>Tags:</p>
+                    {% for tag in page.tags %}
+                    <li><a href="/{{ site.tag_page_dir }}/{{ tag | slugify: 'pretty' }}.html">{{ tag }}</a></li>
+                    {% endfor %}
+                </ul>
+                {% include related-posts.html %}
             </div>
-            <article class="text-start">
-                {{ content }}
-            </article>  
-            <ul class="post-info post-tags">
-                <p>Tags:</p>
-                {% for tag in page.tags %}
-                <li><a href="/{{ site.tag_page_dir }}/{{ tag | slugify: 'pretty' }}.html">{{ tag }}</a></li>
-                {% endfor %}
-            </ul>
-            </div>
-            {% include related-posts.html %}
         </section>

@@ -1,7 +1,21 @@
     </main>
     <footer>
-        <p>{{ site.data[site.active_lang].footer.copy }}</p>
-        <p>{{ site.data[site.active_lang].footer.dev }}</p>
+        <div class="inner">
+            <a class="brand" href="/"><img src="/assets/img/logos/{{ site.data[site.active_lang].global.logo }}" alt="Our Raging Planet logo" /></a>
+            <div class="contact">
+                <p><a href="https://flaxandteal.co.uk/" target="_blank">Flax & Teal Ltd</a></p>
+                <p>Forsyth House, Belfast</p>
+                <p>BT2 8LA</p>
+            </div>
+            <ul class="links">
+                <li><a href="#">EULA</a></li>
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+            <div class="copy">
+                <p class="font-nav uppercase">{{ site.data[site.active_lang].footer.copy }} {{ site.data[site.active_lang].footer.dev }}</p>
+            </div>
+        </div>
     </footer>
 
     <!-- JAVASCRIPT / Bootstrap -->

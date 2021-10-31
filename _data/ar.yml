@@ -1,5 +1,6 @@
 global:
   orp: Our Raging Planet
+  logo: logo-text-ar_SA.svg
 lang:
   en: English
   ar: اَلْعَرَبِيَّةُ
@@ -27,4 +28,4 @@ contact:
   error: There was a mushkila submitting your form. Kindly try again.
 footer:
   copy: <span class="site-red">&copy;</span> <span id="current-year">0000</span> OurRagingPlanet. All rights reserved.
-  dev: Website designed by <a href="http://davyk17.github.io/" target="_blank">Davy Kamanzi</a>
+  dev: Website designed by <a href="http://davyk17.github.io/" target="_blank">Davy Kamanzi</a>.
