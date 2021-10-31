@@ -25,7 +25,7 @@ const scrollToTop = () => {
 
 const menuScrollHandler = () => {
     const scroll = $(window).scrollTop();
-    const topHeight = parseInt($(".landing #content-bg").css("height"));
+    const topHeight = parseInt($(".landing .content-bg").css("height"));
 
     if (scroll >= topHeight) {
         $("header").removeClass("scroll-top", 250, "easeInBack");
