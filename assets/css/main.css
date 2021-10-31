@@ -378,6 +378,13 @@ header.scroll-top .nav-link:focus {
     background-color: #bd1714 !important;
     border-radius: 100% !important;
     z-index: 1000;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.btn.btn-scroll-top:hover,
+.btn.btn-scroll-top:focus {
+    background-color: #e7201d !important;
+    transition: background-color 0.2s ease-in-out;
 }
 
 #header-clear {
