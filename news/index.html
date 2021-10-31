@@ -9,7 +9,7 @@ description:
     ar: ابق على علم بآخر أخبارنا.
 ---
         <section class="landing">
-            <div id="content-bg">
+            <div class="content-bg">
                 <div class="content">
                     <h1>{{ site.data[site.active_lang].pages.news }}</h1>
                     <p class="caption">{{ site.data[site.active_lang].desc.news }}</p>
@@ -17,11 +17,13 @@ description:
             </div>
         </section>
         <section class="news-posts light">
-            <div class="content">
-                <h2 class="site-darkblue">{{ site.data[site.active_lang].news.latest }}</h2>
-                {% for post in paginator.posts %}
-                    {% include list-story.html %}
-                {% endfor %}
-                {% include news-paginator.html %}
+            <div class="content-bg">
+                <div class="content">
+                    <h2 class="site-darkblue">{{ site.data[site.active_lang].news.latest }}</h2>
+                    {% for post in paginator.posts %}
+                        {% include list-story.html %}
+                    {% endfor %}
+                    {% include news-paginator.html %}
+                </div>
             </div>
         </section>

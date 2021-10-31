@@ -2,7 +2,7 @@
 layout: default
 ---
         <section class="landing">
-            <div id="content-bg">
+            <div class="content-bg">
                 <div class="content">
                     <h1>News</h1>
                     <p class="caption">Keep up to date with our latest news.</p>
@@ -10,13 +10,15 @@ layout: default
             </div>
         </section>
         <section class="news-posts light">
-            <div class="content">
-                <h2 class="site-darkblue">All posts in "{{ page.title }}"</h2>
-                {% assign this_cat = page.title %}
-                {% assign paginator = page.paginator %}
-                {% for post in paginator.posts %}
-                    {% include list-story.html %}
-                {% endfor %}
-                {% include news-paginator.html type="category" %}
+            <div class="content-bg">
+                <div class="content">
+                    <h2 class="site-darkblue">All posts in "{{ page.title }}"</h2>
+                    {% assign this_cat = page.title %}
+                    {% assign paginator = page.paginator %}
+                    {% for post in paginator.posts %}
+                        {% include list-story.html %}
+                    {% endfor %}
+                    {% include news-paginator.html type="category" %}
+                </div>
             </div>
         </section>
