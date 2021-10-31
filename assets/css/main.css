@@ -95,20 +95,39 @@ em {
 
 section:not(.landing) {
     display: flex;
-    padding: 3.5rem 2.5rem;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     text-align: center;
 }
 
-section:not(.landing).light {
-    background-color: white;
+section:not(.landing) .content-bg {
+    min-width: 100%;
+    min-height: 100%;
+    padding: 3.5rem 2.5rem;
+}
+
+section:not(.landing).light,
+section:not(.landing).lightish {
     color: black;
 }
 
-section:not(.landing).light [data-bs-toggle="tooltip"] {
+section:not(.landing).light {
+    background-color: white;
+}
+
+section:not(.landing).lightish .content-bg {
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+section:not(.landing).light [data-bs-toggle="tooltip"],
+section:not(.landing).lightish [data-bs-toggle="tooltip"] {
     border-bottom: 1px dotted #111739 !important;
+}
+
+section:not(.landing).dark,
+section:not(.landing).darkish {
+    color: white;
 }
 
 section:not(.landing).dark {
@@ -116,14 +135,18 @@ section:not(.landing).dark {
     color: white;
 }
 
-section:not(.landing).dark [data-bs-toggle="tooltip"] {
+section:not(.landing).darkish .content-bg {
+    background-color: rgba(17, 23, 57, 0.75);
+}
+
+section:not(.landing).dark [data-bs-toggle="tooltip"],
+section:not(.landing).darkish [data-bs-toggle="tooltip"] {
     border-bottom: 1px dotted white !important;
 }
 
 section:not(.landing) .content {
     max-width: 1100px;
     margin: auto;
-    z-index: 1;
 }
 
 section:not(.landing) .content-head {
@@ -138,11 +161,13 @@ section:not(.landing) .content-head::after {
     margin-top: 1rem;
 }
 
-section:not(.landing).dark .content-head::after {
+section:not(.landing).dark .content-head::after,
+section:not(.landing).darkish .content-head::after {
     background-color: white;
 }
 
-section:not(.landing).light .content-head::after {
+section:not(.landing).light .content-head::after,
+section:not(.landing).lightish .content-head::after {
     background-color: #bd1714;
 }
 
@@ -170,11 +195,13 @@ section:not(.landing) .content-head .section-subtitle {
     margin: 1rem 0;
 }
 
-section:not(.landing).light .section-title {
+section:not(.landing).light .section-title,
+section:not(.landing).lightish .section-title {
     color: #111739;
 }
 
-section:not(.landing).dark .section-title {
+section:not(.landing).dark .section-title,
+section:not(.landing).darkish .section-title {
     color: #c0c0c0;
 }
 
@@ -190,7 +217,7 @@ div:not(.news-posts) .section-subtitle {
     text-align: center !important;
 }
 
-#notfound #content-bg {
+#notfound .content-bg {
     height: 590px;
 }
 
@@ -509,7 +536,7 @@ main h6 {
     color: white !important;
 }
 
-.landing #content-bg {
+.landing .content-bg {
     background-color: rgba(0, 0, 0, 0.5);
     height: auto;
     min-height: 400px;
@@ -550,7 +577,7 @@ main h6 {
 }
 
 @media only screen and (max-width: 991px) {
-    .landing #content-bg {
+    .landing .content-bg {
         min-height: unset;
     }
     .landing .content {
@@ -619,23 +646,36 @@ main h6 {
 
 /* Features section */
 
-.features-list {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+#features {
+    background: white url('/assets/img/backgrounds/splash.jpg') no-repeat fixed center !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover !important;
+    background-attachment: scroll !important;
+    padding-top: unset !important;
 }
 
-#features img {
+.features-list {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+#features>img {
     position: absolute;
     height: 500px;
     width: auto;
-    right: 15%;
-    opacity: 0.35;
-    z-index: 0;
+    right: 5%;
+    margin-top: 3.5rem;
+    opacity: 0.5;
+    z-index: 1;
 }
 
 @media only screen and (max-width: 991px) {
-    #features img {
+    #features>img {
         display: none;
     }
 }
@@ -662,10 +702,6 @@ main h6 {
     .features-list ul {
         width: 100%;
     }
-}
-
-#features-list {
-    padding-top: unset !important;
 }
 
 #features-list .box-container {
@@ -705,6 +741,15 @@ main h6 {
 
 
 /* Resources section */
+
+#resources {
+    background: white url('/assets/img/backgrounds/raikoke2.jpg') no-repeat fixed center !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover !important;
+    background-attachment: scroll !important;
+}
 
 .resources-list {
     display: flex;
