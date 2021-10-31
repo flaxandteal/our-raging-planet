@@ -221,10 +221,11 @@ section:not(.landing).darkish .section-subtitle {
     color: #C4C5CE;
 }
 
-div:not(.news-posts) .section-title,
+
+/* div:not(.news-posts) .section-title,
 div:not(.news-posts) .section-subtitle {
     text-align: center !important;
-}
+} */
 
 #notfound .content-bg {
     height: 590px;
