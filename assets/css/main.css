@@ -14,7 +14,7 @@ html {
 
 body {
     position: relative;
-    background: #111739 url('/assets/img/backgrounds/landing.jpg') no-repeat fixed center !important;
+    background: #111739 url('/assets/img/backgrounds/splash.jpg') no-repeat fixed center !important;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -71,7 +71,7 @@ em {
 }
 
 .site-red {
-    color: #bd1714;
+    color: #3A3E53;
 }
 
 .site-darkblue {
@@ -168,7 +168,7 @@ section:not(.landing).darkish .content-head::after {
 
 section:not(.landing).light .content-head::after,
 section:not(.landing).lightish .content-head::after {
-    background-color: #bd1714;
+    background-color: #3A3E53;
 }
 
 section:not(.landing) .content-head .section-title,
@@ -206,10 +206,19 @@ section:not(.landing).darkish .section-title {
 }
 
 .section-subtitle {
-    color: #bd1714;
     font-size: 1.5rem;
     font-weight: 500;
     margin: 1rem 0;
+}
+
+section:not(.landing).light .section-subtitle,
+section:not(.landing).lightish .section-subtitle {
+    color: #3A3E53;
+}
+
+section:not(.landing).dark .section-subtitle,
+section:not(.landing).darkish .section-subtitle {
+    color: #C4C5CE;
 }
 
 div:not(.news-posts) .section-title,
@@ -291,7 +300,7 @@ nav {
         top: 75px;
         left: 0;
         padding: 0 1rem;
-        background-color: #bd1714;
+        background-color: #3A3E53;
         z-index: 100;
     }
 }
@@ -328,7 +337,7 @@ header.scroll-top .nav-link {
 header.scroll-top .nav-link.active,
 header.scroll-top .nav-link:hover,
 header.scroll-top .nav-link:focus {
-    color: #bd1714 !important;
+    color: #C4C5CE !important;
     transition: color 0.25s ease-in-out;
 }
 
@@ -346,7 +355,7 @@ header.scroll-top .nav-link:focus {
 
 .lang-select button {
     background-color: white !important;
-    color: #bd1714 !important;
+    color: #3A3E53 !important;
     text-transform: uppercase;
 }
 
@@ -360,7 +369,7 @@ header.scroll-top .nav-link:focus {
 }
 
 .lang-select .dropdown-item:not(.disabled) {
-    color: #bd1714;
+    color: #3A3E53;
 }
 
 .lang-select .dropdown-item.disabled {
@@ -375,7 +384,7 @@ header.scroll-top .nav-link:focus {
     bottom: 5rem;
     right: 2rem;
     padding: unset !important;
-    background-color: #bd1714 !important;
+    background-color: #3A3E53 !important;
     border-radius: 100% !important;
     z-index: 1000;
 }
@@ -483,14 +492,14 @@ footer .inner .copy p {
 /* Main elements */
 
 main a {
-    color: #bd1714 !important;
+    color: #3A3E53 !important;
     text-decoration: none !important;
     transition: color 0.15s ease-in-out;
 }
 
 main a:hover,
 main a:focus {
-    color: #e7201d !important;
+    color: #565865 !important;
     transition: color 0.15s ease-in-out;
 }
 
@@ -613,19 +622,19 @@ main h6 {
 
 .home-nav .btn.btn-home-nav:hover,
 .home-nav .btn.btn-home-nav:focus {
-    color: #bd1714 !important;
+    color: #3A3E53 !important;
     transition: color 0.25s ease-in-out;
 }
 
 .home-nav .btn.btn-video-modal {
-    background-color: #bd1714 !important;
+    background-color: #3A3E53 !important;
     color: white !important;
     transition: background-color 0.25s ease-in-out;
 }
 
 .home-nav .btn.btn-video-modal:hover,
 .home-nav .btn.btn-video-modal:focus {
-    background-color: #e7201d !important;
+    background-color: #565865 !important;
     transition: background-color 0.25s ease-in-out;
 }
 
@@ -687,7 +696,7 @@ main h6 {
 }
 
 .features-list li::marker {
-    color: #bd1714;
+    color: #3A3E53;
 }
 
 @media only screen and (max-width: 991px) {
@@ -859,7 +868,7 @@ main h6 {
     }
     .carousel-control-prev-icon,
     .carousel-control-next-icon {
-        background-color: #bd1714;
+        background-color: #3A3E53;
     }
 }
 
@@ -957,12 +966,12 @@ main h6 {
 
 #contact .contact-form button[type=submit]:hover,
 #contact .contact-form button[type=submit]:focus {
-    background-color: #bd1714;
+    background-color: #3A3E53;
     transition: background-color 0.2s ease-in-out;
 }
 
 #contact-form-error,
 #contact-form-success {
     display: none;
-    color: #bd1714;
+    color: #3A3E53;
 }
