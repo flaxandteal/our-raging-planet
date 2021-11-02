@@ -30,11 +30,11 @@ const menuScrollHandler = () => {
     if (scroll >= topHeight) {
         $("header").removeClass("scroll-top", 250, "easeInBack");
         $("#header-clear").show();
-        $(".btn-scroll-top").show();
+        $(".btn-scroll-top").fadeIn(200);
     } else {
         $("header").addClass("scroll-top", 250, "easeInBack");
         $("#header-clear").hide();
-        $(".btn-scroll-top").hide();
+        $(".btn-scroll-top").fadeOut(200);
     }
 }
 
