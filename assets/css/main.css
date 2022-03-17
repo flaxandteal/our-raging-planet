@@ -299,21 +299,30 @@ nav {
 }
 
 @media (max-width: 991px) {
-    .navbar-collapse.collapsing,
-    .navbar-collapse.collapse.show {
-        position: absolute;
-        width: 100%;
-        top: 75px;
-        left: 0;
+    .offcanvas {
         padding: 0 1rem;
-        background-color: #4D516B;
-        z-index: 100;
+        background-color: #4D516B !important;
+        background-image: url("/assets/img/backgrounds/low-contrast-linen.png");
+    }
+    .offcanvas-header .offcanvas-title img {
+        height: 40px;
+        width: auto;
+    }
+    .offcanvas-header .btn-close {
+        font-size: 2rem !important;
+        margin: unset !important;
     }
 }
 
 .navbar-nav {
     width: 100%;
     justify-content: flex-end;
+}
+
+@media (max-width: 991px) {
+    .navbar-nav {
+        font-size: 1.75rem;
+    }
 }
 
 .nav-link {
