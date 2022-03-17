@@ -82,6 +82,10 @@ em {
     color: #c0c0c0;
 }
 
+.font-body {
+    font-family: "Open Sans", sans-serif !important;
+}
+
 .font-nav {
     font-family: "Open Sans Condensed", sans-serif !important;
 }
