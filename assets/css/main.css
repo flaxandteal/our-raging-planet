@@ -245,6 +245,7 @@ header {
     width: 100%;
     height: auto;
     z-index: 100;
+    box-shadow: 0 4px 8px rgba(50, 50, 50, 0.5);
 }
 
 nav {
@@ -336,6 +337,7 @@ nav {
 header.scroll-top {
     position: static;
     background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: none;
 }
 
 header.scroll-top nav {
