@@ -581,7 +581,7 @@ main h6 {
 
 .landing h1,
 .landing .caption {
-    text-align: center !important;
+    text-align: center;
     filter: drop-shadow(0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.5))
 }
 
