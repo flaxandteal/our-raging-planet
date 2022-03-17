@@ -67,33 +67,39 @@
                     {% endfor %}
                 </ul>
             </div>
-            <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#top-menu" aria-controls="topmenu" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler ms-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#top-menu" aria-controls="topmenu" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"><img src="/assets/img/icons/menu.svg" alt="" /></span>
             </button>
-            <div class="collapse navbar-collapse" id="top-menu">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link{% if page.name == "index.html" and page.dir == "/" %} active" aria-current="page{% endif %}" href="/">{{ site.data[site.active_lang].pages.home }}</a>
-                    </li><!--
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% include index-section-link.html %}#about">{{ site.data[site.active_lang].pages.about }}</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% include index-section-link.html %}#features">{{ site.data[site.active_lang].pages.features }}</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% include index-section-link.html %}#resources">{{ site.data[site.active_lang].pages.resources }}</a>
-                    </li>-->
-                    <li class="nav-item">
-                        <a class="nav-link{% if page.name contains "sandstorms" and page.name contains ".html" %} active" aria-current="page{% endif %}" href="/sandstorms">{{ site.data[site.active_lang].pages.sandstorms }}</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link{% if page.url contains "news/" %} active" aria-current="page{% endif %}" href="/news">{{ site.data[site.active_lang].pages.news }}</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link{% if page.name contains "contact" and page.name contains ".html" %} active" aria-current="page{% endif %}" href="/contact">{{ site.data[site.active_lang].pages.contact }}</a>
-                    </li>
-                </ul>
+            <div class="offcanvas offcanvas-end" id="top-menu" aria-labelledby="offcanvasLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasLabel"><img src="/assets/img/logos/logo.svg" alt="Our Raging Planet logo" /></h5>
+                    <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link{% if page.name == "index.html" and page.dir == "/" %} active" aria-current="page{% endif %}" href="/">{{ site.data[site.active_lang].pages.home }}</a>
+                        </li><!--
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% include index-section-link.html %}#about">{{ site.data[site.active_lang].pages.about }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% include index-section-link.html %}#features">{{ site.data[site.active_lang].pages.features }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% include index-section-link.html %}#resources">{{ site.data[site.active_lang].pages.resources }}</a>
+                        </li>-->
+                        <li class="nav-item">
+                            <a class="nav-link{% if page.name contains "sandstorms" and page.name contains ".html" %} active" aria-current="page{% endif %}" href="/sandstorms">{{ site.data[site.active_lang].pages.sandstorms }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link{% if page.url contains "news/" %} active" aria-current="page{% endif %}" href="/news">{{ site.data[site.active_lang].pages.news }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link{% if page.name contains "contact" and page.name contains ".html" %} active" aria-current="page{% endif %}" href="/contact">{{ site.data[site.active_lang].pages.contact }}</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
