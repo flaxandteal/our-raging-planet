@@ -683,15 +683,23 @@ main h6 {
     max-width: 650px;
 }
 
+.home-head .buttons {
+    display: flex;
+}
+
+.home-head .buttons [role=button]:not(:first-child) {
+    margin: 0 1rem;
+}
+
 .home-head .btn.btn-video-modal {
-    background-color: #3A3E53 !important;
+    background-color: hsla(231, 54%, 5%, 0.8) !important;
     color: white !important;
     transition: background-color 0.25s ease-in-out;
 }
 
 .home-head .btn.btn-video-modal:hover,
 .home-head .btn.btn-video-modal:focus {
-    background-color: #565865 !important;
+    background-color: hsla(230, 54%, 5%, 1) !important;
     transition: background-color 0.25s ease-in-out;
 }
 
