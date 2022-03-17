@@ -51,7 +51,7 @@
         <nav class="navbar navbar-expand-xl">
             <a class="navbar-brand navbar-logo d-block d-md-none me-auto" href="/"><img src="/assets/img/logos/logo.svg" alt="Our Raging Planet logo" /></a>
             <a class="navbar-brand navbar-logo d-none d-md-block me-auto" href="/"><img src="/assets/img/logos/{{ site.data[site.active_lang].global.logo }}" alt="Our Raging Planet logo" /></a>
-            <div class="dropdown lang-select order-xl-3">
+            <div class="dropdown lang-select font-nav order-xl-3">
                 <button class="btn dropdown-toggle uppercase" id="lang-selector" data-bs-toggle="dropdown" aria-expanded="false" href="#">{{ site.data[site.active_lang].lang[site.active_lang] }}</button>
                 <ul class="dropdown-menu uppercase" aria-labelledby="lang-selector">
                     {% for lang in site.languages %}
