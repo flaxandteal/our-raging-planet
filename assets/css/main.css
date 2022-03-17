@@ -187,7 +187,7 @@ section:not(.landing) .content-head .section-subtitle {
     height: 300px;
 }
 
-@media only screen and (max-width: 991px) {
+@media (max-width: 991px) {
     .section-header-img,
     #top-carousel {
         display: none;
@@ -256,7 +256,7 @@ nav {
     padding: 1rem 0;
 }
 
-@media only screen and (max-width: 1199px) {
+@media (max-width: 1199px) {
     nav {
         padding: 1rem;
     }
@@ -298,7 +298,7 @@ nav {
     height: inherit;
 }
 
-@media only screen and (max-width: 991px) {
+@media (max-width: 991px) {
     .navbar-collapse.collapsing,
     .navbar-collapse.collapse.show {
         position: absolute;
@@ -348,7 +348,7 @@ header.scroll-top .nav-link:focus {
     transition: color 0.25s ease-in-out;
 }
 
-@media only screen and (max-width: 991px) {
+@media (max-width: 991px) {
     .nav-link.active,
     .nav-link:hover,
     .nav-link:focus,
@@ -448,7 +448,7 @@ footer .inner {
     grid-template-areas: "brand contact links" "copy copy copy";
 }
 
-@media only screen and (max-width: 1199px) {
+@media (max-width: 1199px) {
     footer .inner {
         padding: 5rem 2rem 2rem;
         grid: auto auto auto auto / 1fr 1fr;
@@ -481,7 +481,7 @@ footer .inner .links {
     list-style-type: none;
 }
 
-@media only screen and (max-width: 1199px) {
+@media (max-width: 1199px) {
     footer .inner .contact,
     footer .inner .links {
         margin-top: 2rem;
@@ -599,7 +599,7 @@ main h6 {
     border-bottom: 1px dotted white !important;
 }
 
-@media only screen and (max-width: 991px) {
+@media (max-width: 991px) {
     .landing .content-bg {
         min-height: unset;
     }
@@ -739,7 +739,7 @@ main h6 {
     z-index: 1;
 }
 
-@media only screen and (max-width: 991px) {
+@media (max-width: 991px) {
     #features>img {
         display: none;
     }
@@ -755,7 +755,7 @@ main h6 {
     color: #3A3E53;
 }
 
-@media only screen and (max-width: 991px) {
+@media (max-width: 991px) {
     .features-list {
         flex-direction: column-reverse;
         justify-content: space-between;
@@ -796,7 +796,7 @@ main h6 {
     text-align: left;
 }
 
-@media only screen and (max-width: 991px) {
+@media (max-width: 991px) {
     .features-box {
         width: 100%;
         height: auto;
@@ -850,7 +850,7 @@ main h6 {
     margin: unset;
 }
 
-@media only screen and (max-width: 575px) {
+@media (max-width: 575px) {
     .resources-list a {
         flex: 1 0 25%;
         width: auto;
@@ -894,7 +894,7 @@ main h6 {
     width: 175px;
 }
 
-@media only screen and (max-width: 767px) {
+@media (max-width: 767px) {
     #sandstorms-two img {
         width: 100%;
         height: auto;
@@ -902,7 +902,7 @@ main h6 {
 }
 
 
-/* @media only screen and (min-width: 768px) {
+/* @media (min-width: 768px) {
     #sandstorms-one .logos {
         justify-content: center;
         align-items: center;
@@ -916,7 +916,7 @@ main h6 {
     }
 } */
 
-@media only screen and (max-width: 991px) {
+@media (max-width: 991px) {
     #sandstorms-one .content,
     #sandstorms-two .content {
         flex-direction: column-reverse;
@@ -932,7 +932,7 @@ main h6 {
     }
 }
 
-@media only screen and (min-width: 992px) {
+@media (min-width: 992px) {
     #sandstorms-one .content {
         justify-content: space-between;
         align-items: center;
@@ -964,7 +964,7 @@ main h6 {
     width: 50%;
 }
 
-@media only screen and (max-width: 991px) {
+@media (max-width: 991px) {
     #contact .content {
         flex-direction: column;
     }
@@ -1004,7 +1004,7 @@ main h6 {
     width: 48%;
 }
 
-@media only screen and (max-width: 991px) {
+@media (max-width: 991px) {
     #contact .form-row {
         flex-direction: column;
         margin-bottom: unset;
