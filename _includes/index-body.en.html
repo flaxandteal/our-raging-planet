@@ -1,13 +1,25 @@
         <section id="home" class="landing">
             <div class="content-bg">
-                <div class="content home">
+                <div class="content text-start">
                     <div class="home-head">    
-                        <h1>Our chaotic world in context</h1>
-                        <p class="caption">Bring home the impact of natural disasters</p>
+                        <h1 class="font-body text-start">Our <span style="color: #bd1714;">chaotic world</span> in context</h1>
+                        <p class="caption text-start">Bring home the impact of natural disasters</p>
+                        <button type="button" class="btn btn-video-modal font-nav fs-2 uppercase" role="button" data-bs-toggle="modal" data-bs-target="#videoModal">View demo</button>
                     </div>
                 </div>
             </div>
         </section>
+        <div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <video id="top-video" alt="Opening video" controls>
+                        <source type="video/webm" src="/assets/video/demo.webm">
+                        <source type="video/mp4" src="/assets/video/demo.mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
         <section class="home-nav">
             <div class="content">
                 <ul class="nav nav-pills font-nav uppercase">
@@ -20,17 +32,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% include index-section-link.html %}#resources">{{ site.data[site.active_lang].pages.resources }}</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="btn btn-video-modal" role="button" data-bs-toggle="collapse" data-bs-target="#video-modal" aria-expanded="false" aria-controls="video-modal">Toggle demo</a>
-                    </li>
                 </ul>
-                <div class="collapse" id="video-modal">
-                    <video id="top-video" alt="Opening video" controls>
-                        <source type="video/webm" src="/assets/video/demo.webm">
-                        <source type="video/mp4" src="/assets/video/demo.mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
             </div>
         </section>
         <section id="about" class="light">
@@ -72,11 +74,11 @@
                     </div>
                     <div class="features-list">
                         <ul>
-                            <li><strong>Follow the timeline as events unfold!</strong> See news reports and generate tasks based off the disaster you have simulated, whether it be hours or even days, with accurating scaling</li>
-                            <li>Tasks can be refined down to the lesson plan, and also tailored for each natural disaster</li>
-                            <li>Combine physical and human geography together by exploring not only the physical effects of a disaster, but the impact upon social life</li>
-                            <li><strong>Contextualise with local data!</strong> Using OpenStreetMap, we have populated OurRagingPlanet's software with Northern Irish landmarks and features</li>
-                            <li>Our list of simulations includes earthquakes, storm surges, volcanic eruptions and sandstorms, bringing social, economic and cultural resilience to life</li>
+                            <li><strong class="site-darkblue">Follow the timeline as events unfold!</strong> See news reports and generate tasks based off the disaster you have simulated, whether it be hours or even days, with accurating scaling</li>
+                            <li><strong class="site-darkblue">Tasks can be refined down to the lesson plan</strong>, and also tailored for each natural disaster</li>
+                            <li><strong class="site-darkblue">Combine physical and human geography together</strong> by exploring not only the physical effects of a disaster, but the impact upon social life</li>
+                            <li><strong class="site-darkblue">Contextualise with local data!</strong> Using OpenStreetMap, we have populated OurRagingPlanet's software with Northern Irish landmarks and features</li>
+                            <li>Our list of simulations includes earthquakes, storm surges, volcanic eruptions and sandstorms, <strong class="site-darkblue">bringing social, economic and cultural resilience to life</strong></li>
                         </ul>
                     </div>
                 </div>
