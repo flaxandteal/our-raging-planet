@@ -118,14 +118,14 @@ const trimAuthorSpace = () => {
 
 // DEMO VIDEO BEHAVIOUR
 
-// $("#video-modal").on("show.bs.collapse", () => {
-//     $("#top-video")[0].play();
-// });
+$("#videoModal").on("shown.bs.modal", () => {
+    $("#top-video")[0].play();
+});
 
-// $("#video-modal").on("hidden.bs.collapse", () => {
-//     $("#top-video")[0].pause();
-//     $("#top-video")[0].currentTime = 0;
-// });
+$("#videoModal").on("hidden.bs.modal", () => {
+    $("#top-video")[0].pause();
+    $("#top-video")[0].currentTime = 0;
+});
 
 // READY DOCUMENT FUNCTION CALLS 
 
