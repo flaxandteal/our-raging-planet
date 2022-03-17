@@ -402,7 +402,7 @@ header.scroll-top .nav-link:focus {
     padding: unset !important;
     background-color: #3A3E53 !important;
     border-radius: 100% !important;
-    z-index: 1000;
+    z-index: 99;
     transition: background-color 0.2s ease-in-out;
 }
 
