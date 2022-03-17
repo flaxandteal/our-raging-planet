@@ -715,6 +715,13 @@ main h6 {
 #videoModal video {
     width: 100%;
     height: auto;
+    margin: auto;
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+    #videoModal video {
+        width: 90%;
+    }
 }
 
 
