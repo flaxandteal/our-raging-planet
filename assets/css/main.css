@@ -640,30 +640,71 @@ main h6 {
     transition: color 0.25s ease-in-out;
 }
 
-.home-nav .btn.btn-video-modal {
+
+/* Home section */
+
+#home .content-bg {
+    min-height: 750px;
+}
+
+#home .content {
+    max-width: 1100px;
+    margin: auto;
+    align-items: flex-start;
+}
+
+#home h1 {
+    text-transform: none;
+    font-size: 4rem !important;
+    font-weight: 800 !important;
+    filter: drop-shadow(0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.5)) !important;
+}
+
+#home .caption {
+    font-size: 2rem !important;
+}
+
+#home h1,
+#home .caption {
+    filter: none;
+}
+
+.home-head {
+    max-width: 650px;
+}
+
+.home-head .btn.btn-video-modal {
     background-color: #3A3E53 !important;
     color: white !important;
     transition: background-color 0.25s ease-in-out;
 }
 
-.home-nav .btn.btn-video-modal:hover,
-.home-nav .btn.btn-video-modal:focus {
+.home-head .btn.btn-video-modal:hover,
+.home-head .btn.btn-video-modal:focus {
     background-color: #565865 !important;
     transition: background-color 0.25s ease-in-out;
 }
 
-.home-nav .collapse video,
-.home-nav .collapsing video {
-    width: 800px;
-    height: auto;
-    margin: 2rem 0;
+@media (max-width: 576px) {
+    #videoModal .modal-dialog {
+        max-width: 100%;
+    }
 }
 
-@media only screen and (max-width: 991px) {
-    .home-nav .collapse video,
-    .home-nav .collapsing video {
-        width: 85%;
+@media (min-width: 576px) {
+    #videoModal .modal-dialog {
+        max-width: 800px;
     }
+}
+
+#videoModal .modal-content {
+    background-color: unset !important;
+    border: unset !important;
+}
+
+#videoModal video {
+    width: 100%;
+    height: auto;
 }
 
 
