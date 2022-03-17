@@ -621,6 +621,7 @@ main h6 {
 
 .home-nav .nav {
     justify-content: center;
+    align-items: center;
 }
 
 .home-nav .nav .nav-item a {
