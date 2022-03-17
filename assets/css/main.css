@@ -136,6 +136,7 @@ section:not(.landing).darkish {
 
 section:not(.landing).dark {
     background-color: #111739;
+    background-image: url("/assets/img/backgrounds/low-contrast-linen.png");
     color: white;
 }
 
