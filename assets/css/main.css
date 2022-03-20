@@ -694,15 +694,15 @@ main h6 {
 }
 
 .home-head .btn.btn-video-modal {
-    background-color: hsla(231, 54%, 5%, 0.8) !important;
+    background-color: hsla(231, 54%, 5%, 1);
     color: white !important;
-    transition: background-color 0.25s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
 }
 
 .home-head .btn.btn-video-modal:hover,
 .home-head .btn.btn-video-modal:focus {
-    background-color: hsla(230, 54%, 5%, 1) !important;
-    transition: background-color 0.25s ease-in-out;
+    background-color: hsla(231, 54%, 5%, 0.75);
+    transition: background-color 0.2s ease-in-out;
 }
 
 @media (max-width: 576px) {
@@ -720,18 +720,29 @@ main h6 {
 #videoModal .modal-content {
     background-color: unset !important;
     border: unset !important;
+    color: white;
 }
 
-#videoModal video {
+#videoModal figure {
     width: 100%;
     height: auto;
     margin: auto;
+    text-align: center;
+}
+
+#videoModal video {
+    width: inherit;
+    height: inherit;
 }
 
 @media (min-width: 576px) and (max-width: 991px) {
-    #videoModal video {
+    #videoModal figure {
         width: 90%;
     }
+}
+
+#videoModal figcaption {
+    margin-top: 0.5rem;
 }
 
 
